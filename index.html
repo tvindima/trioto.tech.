@@ -9,30 +9,33 @@
   <style>
     :root { --bg:#0b0b0b; --white:#f5f5f5; --red:#e11616; }
     *{box-sizing:border-box} html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,'Helvetica Neue',sans-serif;color:var(--white);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,'Helvetica Neue',sans-serif;color:var(--white);background:#000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
+    /* HERO */
     .hero{
       position:relative;min-height:100svh;display:flex;flex-direction:column;
-      background:#000 url('./assets/bg.png?v=5') 58% 45%/cover no-repeat fixed; isolation:isolate;
+      background:#000 url('./assets/bg.png?v=6') 58% 45%/cover no-repeat fixed; isolation:isolate;
     }
     .overlay{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg, rgba(0,0,0,.35) 0 28%, rgba(0,0,0,0) 55%, rgba(0,0,0,.45) 100%)}
     @supports (-webkit-touch-callout:none){ .hero{ background-attachment:scroll; } }
 
     .container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,6vw,48px)}
 
+    /* 700px logo fixed at top-left of hero */
     .hero-logo{
-      position:absolute; z-index:1;
-      top:24px; left:clamp(16px,6vw,48px);
-      height:700px; width:auto;
-      pointer-events:none;
+      position:absolute; z-index:1; top:24px; left:clamp(16px,6vw,48px);
+      height:700px; width:auto; pointer-events:none;
       filter:drop-shadow(0 0 10px rgba(0,0,0,.6));
     }
 
+    /* Header nav aligned right */
     header{position:relative; z-index:2; height:84px; display:flex; align-items:center; justify-content:flex-end}
     nav{display:flex;gap:32px}
     nav a{color:#f5f5f5;text-decoration:none;font-weight:600;opacity:.9}
     nav a:hover{opacity:1;text-shadow:0 0 10px rgba(225,22,22,.7)}
 
+    /* Hero copy */
     .content{position:relative; z-index:2; flex:1; display:flex; align-items:center}
     .grid{display:grid; gap:10px; max-width:720px; margin-left:5%}
     .kicker{font-size:clamp(12px,2vw,14px);opacity:.9}
@@ -43,6 +46,16 @@
     .cta{padding:12px 18px;border:2px solid rgba(255,255,255,.85);border-radius:12px;font-size:clamp(14px,2.2vw,18px);font-weight:600;color:#f5f5f5;text-decoration:none;backdrop-filter:blur(4px);white-space:nowrap}
     .cta:hover{box-shadow:0 0 0 2px rgba(225,22,22,.25),0 0 30px rgba(225,22,22,.35) inset}
 
+    /* Sections below hero: solid black */
+    section.section{background:#0b0b0b;padding:80px 0}
+    section.section .inner{max-width:1000px;margin:0 auto;padding:0 clamp(16px,6vw,48px)}
+
+    /* Contact card */
+    .card{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px;background:rgba(255,255,255,.02)}
+    .btn{display:inline-block;margin-top:12px;padding:12px 18px;border:2px solid rgba(255,255,255,.85);border-radius:12px;color:#f5f5f5;text-decoration:none;font-weight:600}
+    .btn:hover{box-shadow:0 0 0 2px rgba(225,22,22,.25),0 0 30px rgba(225,22,22,.35) inset}
+
+    /* Responsive */
     @media (max-width:1200px){ .hero-logo{ height:520px } }
     @media (max-width:900px){ .hero-logo{ height:380px } .grid{ margin-left:0 } }
     @media (max-width:700px){ .hero-logo{ height:260px } header{height:68px} nav{gap:18px} }
@@ -56,7 +69,7 @@
 
     <header class="container">
       <nav aria-label="principal">
-        <a href="about.html">About</a>
+        <a href="#about">About</a>
         <a href="#patents">Patents</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -68,21 +81,39 @@
         <h1>unblock</h1>
         <div class="headline-row">
           <div class="rule" aria-hidden="true"></div>
-          <a class="cta" href="about.html">Learn more</a>
+          <a class="cta" href="#about">Learn more</a>
         </div>
         <div class="sub">the Impossible</div>
       </div>
     </div>
   </section>
 
-  <section id="patents" class="container" style="padding:80px 0">
-    <h2>Patents</h2>
-    <p>Breve resumo do portfólio e áreas tecnológicas. Substituir mais tarde.</p>
+  <!-- About -->
+  <section id="about" class="section" aria-label="About">
+    <div class="inner">
+      <h2>About</h2>
+      <p>A <strong>TRIOTO</strong> dedica-se à criação, desenvolvimento e proteção de tecnologia com foco em propriedade intelectual, engenharia aplicada e parcerias estratégicas.</p>
+      <p>Missão: transformar ideias em tecnologia protegida e escalável. Visão: ser referência europeia em inovação tecnológica protegida.</p>
+    </div>
   </section>
 
-  <section id="contact" class="container" style="padding:40px 0 100px">
-    <h2>Contact</h2>
-    <p>Para contactos institucionais: <a href="mailto:admin@trioto.tech" style="color:#e11616;text-decoration:none;font-weight:600;">admin@trioto.tech</a></p>
+  <!-- Patents -->
+  <section id="patents" class="section" aria-label="Patents">
+    <div class="inner">
+      <h2>Patents</h2>
+      <p>Portfólio em construção. Áreas: energia, software, automação e sistemas inteligentes.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="inner">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email institucional: <a href="mailto:admin@trioto.tech" style="color:#e11616;text-decoration:none;font-weight:600;">admin@trioto.tech</a></p>
+        <a class="btn" href="mailto:admin@trioto.tech?subject=Contacto%20TRIOTO">Escrever agora</a>
+      </div>
+    </div>
   </section>
 </body>
 </html>
