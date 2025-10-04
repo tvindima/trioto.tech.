@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .w{fill:#fff}
+      .text{font-family:Inter, Arial, sans-serif; font-weight:800; letter-spacing:0.06em}
+      .sub{font-family:Inter, Arial, sans-serif; font-weight:600; letter-spacing:0.22em}
+    </style>
+  </defs>
+  <!-- Symbol: triangle with circular nodes -->
+  <g transform="translate(0,-10)">
+    <path d="M600 120 L270 640 L930 640 Z" fill="none" stroke="#fff" stroke-width="34" stroke-linejoin="round"/>
+    <circle cx="600" cy="120" r="34" class="w"/>
+    <circle cx="270" cy="640" r="34" class="w"/>
+    <circle cx="930" cy="640" r="34" class="w"/>
+  </g>
+  <!-- Wordmark -->
+  <g transform="translate(0,10)">
+    <text x="600" y="665" text-anchor="middle" font-size="120" class="w text">TRIOTO</text>
+  </g>
+  <!-- Subtitle -->
+  <text x="600" y="710" text-anchor="middle" font-size="42" class="w sub">TECNOLOGIA E PATENTES</text>
+</svg>
