@@ -8,54 +8,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0b0b0b; --red:#e11616; --white:#f5f5f5; }
+    :root { --bg:#0b0b0b; --white:#f5f5f5; --red:#e11616; }
     *{box-sizing:border-box} html,body{height:100%}
     body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,'Helvetica Neue',sans-serif;color:var(--white);background:var(--bg);overflow-x:hidden}
 
-    /* HERO + FUNDO */
+    /* HERO + FUNDO afinado como referência */
     .hero{
       position:relative;min-height:100svh;display:flex;flex-direction:column;
-      background:#000 url('./assets/bg.png') 58% 45%/cover no-repeat fixed; isolation:isolate;
+      background:#000 url('./assets/bg.png') 55% 42%/cover no-repeat fixed; isolation:isolate;
     }
     .overlay{
       position:absolute;inset:0;z-index:0;
-      background:linear-gradient(90deg, rgba(0,0,0,.45) 0 28%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%);
+      background:linear-gradient(90deg, rgba(0,0,0,.40) 0 26%, rgba(0,0,0,0) 55%, rgba(0,0,0,.50) 100%);
     }
     @supports (-webkit-touch-callout: none) { .hero{ background-attachment:scroll; } }
 
-    /* CONTAINER */
     .container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,6vw,48px)}
 
-    /* HEADER fixo com logo maior e menu à direita */
+    /* HEADER fixo com logo grande e menu à direita */
     header{position:relative;z-index:1;height:96px;display:flex;align-items:center}
     .navwrap{display:flex;align-items:center;justify-content:space-between;width:100%}
     .brand{display:flex;align-items:center;text-decoration:none;color:inherit;gap:14px}
-    .brand img{height:96px;width:auto;display:block;filter:drop-shadow(0 0 6px rgba(0,0,0,.5))}
+    .brand img{height:120px;width:auto;display:block;filter:drop-shadow(0 0 8px rgba(0,0,0,.55))}
     nav{display:flex;align-items:center;gap:32px;margin-left:auto}
     nav a{color:var(--white);text-decoration:none;font-weight:600;opacity:.9}
-    nav a:hover{opacity:1;text-shadow:0 0 12px rgba(225,22,22,.8)}
+    nav a:hover{opacity:1;text-shadow:0 0 10px rgba(225,22,22,.7)}
 
-    /* HERO COPY */
-    .content{position:relative;z-index:1;flex:1;display:flex;align-items:center;justify-content:flex-start}
+    /* HERO COPY alinhada como na referência */
+    .content{position:relative;z-index:1;flex:1;display:flex;align-items:center}
     .grid{display:grid;gap:10px;max-width:720px;margin-left:5%}
     .kicker{font-size:clamp(12px,2vw,14px);opacity:.9;margin-bottom:2px}
     h1{margin:0;font-size:clamp(44px,9vw,112px);line-height:.92;font-weight:800;text-shadow:0 2px 24px rgba(0,0,0,.6)}
     .sub{font-size:clamp(18px,3.2vw,34px);font-weight:300;margin-bottom:6px}
-
-    /* LINHA + CTA na mesma linha */
     .headline-row{display:flex;align-items:center;gap:16px}
     .rule{flex:1;height:2px;background:linear-gradient(90deg, var(--white), rgba(255,255,255,0));opacity:.9}
     .cta{padding:12px 18px;border:2px solid rgba(255,255,255,.85);border-radius:12px;font-size:clamp(14px,2.2vw,18px);font-weight:600;color:var(--white);text-decoration:none;backdrop-filter:blur(4px);white-space:nowrap}
     .cta:hover{box-shadow:0 0 0 2px rgba(225,22,22,.25), 0 0 30px rgba(225,22,22,.35) inset}
 
-    /* SEÇÕES */
     section.content-section{padding:80px 0}
 
-    /* MOBILE */
     @media (max-width:700px){
-      .brand img{height:56px}
-      header{height:72px}
+      .brand img{height:64px}
+      header{height:76px}
       nav{gap:18px}
       .grid{margin-left:0}
     }
