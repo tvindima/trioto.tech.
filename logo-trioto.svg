@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .w{fill:#fff}
+      .st{stroke:#fff;stroke-width:36;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .mark{font-family:Inter, Arial, sans-serif;font-weight:800;letter-spacing:.06em;fill:#fff}
+      .sub{font-family:Inter, Arial, sans-serif;font-weight:600;letter-spacing:.22em;fill:#fff;opacity:.9}
+    </style>
+  </defs>
+  <!-- Símbolo TRIOTO: triângulo com nós -->
+  <g transform="translate(0,-20)">
+    <path d="M600 100 L250 640 L950 640 Z" class="st"/>
+    <circle cx="600" cy="100" r="36" class="w"/>
+    <circle cx="250" cy="640" r="36" class="w"/>
+    <circle cx="950" cy="640" r="36" class="w"/>
+  </g>
+  <!-- Palavra TRIOTO -->
+  <text x="600" y="660" text-anchor="middle" font-size="128" class="mark">TRIOTO</text>
+  <text x="600" y="710" text-anchor="middle" font-size="44" class="sub">TECNOLOGIA E PATENTES</text>
+</svg>
