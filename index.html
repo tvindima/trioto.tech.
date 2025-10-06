@@ -4,60 +4,53 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TRIOTO — Tecnologia e Patentes</title>
-  <meta name="description" content="TRIOTO: tecnologia aplicada, propriedade intelectual e desenvolvimento de produtos." />
-  <meta property="og:title" content="TRIOTO — Tecnologia e Patentes" />
-  <meta property="og:description" content="Tecnologia aplicada, propriedade intelectual e desenvolvimento de produtos." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://trioto.tech" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="TRIOTO: tecnologia própria, patentes e engenharia aplicada." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0c0c0f;--card:#111318;--text:#e8e9ee;--muted:#a7a9b3;--accent:#00d3a7;--stroke:#232632}
+    :root{--bg:#000;--text:#fff;--muted:#b8b8b8;--stroke:#222}
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 0;border-bottom:1px solid var(--stroke)}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo svg{width:34px;height:34px}
-    .logo b{font-weight:800;letter-spacing:0.5px}
-    .pill{padding:8px 14px;border:1px solid var(--stroke);border-radius:999px;background:transparent}
-    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:48px 0}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00));border:1px solid var(--stroke);border-radius:18px;padding:22px}
-    h1{font-size:44px;line-height:1.05;margin:0 0 14px}
-    p.lead{color:var(--muted);font-size:18px;margin:0 0 18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-    .btn{padding:12px 16px;border-radius:12px;border:1px solid var(--stroke);background:#151924}
-    .btn.primary{background:var(--accent);color:#021711;border-color:transparent;font-weight:700}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0 8px}
-    .kpi{padding:18px;border:1px solid var(--stroke);border-radius:14px;background:#0f1117}
-    .section{padding:8px 0 48px}
+    .wrap{max-width:1100px;margin:0 auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--stroke)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:28px}
+    .tag{font-size:12px;color:var(--muted);letter-spacing:.4px}
+    nav{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{padding:8px 12px;border:1px solid var(--stroke);border-radius:999px;background:transparent;font-size:14px}
+    .section{padding:24px 0}
+    h1{font-size:40px;line-height:1.05;margin:0 0 12px}
     h2{font-size:22px;margin:0 0 12px}
-    ul{margin:0;padding-left:18px;color:var(--muted)}
-    footer{border-top:1px solid var(--stroke);padding:18px 0;color:var(--muted);font-size:14px}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--stroke);border-radius:12px}
-    @media (max-width:960px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.wrap{padding:18px}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}h1{font-size:36px}}
+    p.lead{color:var(--muted);font-size:16px;margin:0 0 12px}
+    .card{border:1px solid var(--stroke);border-radius:14px;padding:18px;background:#000}
+    .grid3{display:grid;grid-template-columns:1fr;gap:12px}
+    .kpi{border:1px solid var(--stroke);border-radius:12px;padding:14px;background:#000}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{flex:1 1 100%;text-align:center;padding:12px 14px;border-radius:12px;border:1px solid var(--stroke);background:#000;color:#fff}
+    .btn.primary{background:#fff;color:#000;border-color:#fff}
+    footer{border-top:1px solid var(--stroke);padding:14px 0;color:var(--muted);font-size:13px}
+    @media (min-width:900px){
+      .wrap{padding:24px}
+      .grid3{grid-template-columns:repeat(3,1fr)}
+      .btn{flex:0 0 auto}
+      .brand img{height:34px}
+      h1{font-size:48px}
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="logo" aria-label="TRIOTO logo">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M32 6 L58 50 H6 Z" stroke="white" stroke-opacity="0.9" stroke-width="2"/>
-          <circle cx="32" cy="6" r="3" fill="#00d3a7"/>
-          <circle cx="58" cy="50" r="3" fill="#00d3a7"/>
-          <circle cx="6" cy="50" r="3" fill="#00d3a7"/>
-        </svg>
-        <div style="display:flex;flex-direction:column;line-height:1">
-          <b>TRIOTO</b>
-          <small style="color:var(--muted);font-weight:600;letter-spacing:0.3px;margin-top:-2px">TECNOLOGIA E PATENTES</small>
+      <div class="brand">
+        <!-- Substitui por assets/logo-trioto-black.svg se quiseres versão preta em fundo claro -->
+        <img src="assets/logo-trioto-white.svg" alt="TRIOTO">
+        <div style="line-height:1">
+          <strong>TRIOTO</strong><div class="tag">TECNOLOGIA E PATENTES</div>
         </div>
       </div>
-      <nav style="display:flex;gap:10px;flex-wrap:wrap">
+      <nav>
         <a class="pill" href="#sobre">Sobre</a>
         <a class="pill" href="#areas">Áreas</a>
         <a class="pill" href="#contactos">Contactos</a>
@@ -74,7 +67,7 @@
       </div>
     </section>
 
-    <section class="hero">
+    <section class="section">
       <div class="card">
         <h1>Tecnologia. Patentes. Execução.</h1>
         <p class="lead">Desenvolvemos e protegemos tecnologia aplicada. Do conceito ao protótipo. Da patente à operação.</p>
@@ -83,41 +76,32 @@
           <a class="btn" href="#areas">Áreas de atuação</a>
         </div>
       </div>
-      <div class="grid">
-        <div class="kpi"><b>IP</b><br/><span class="muted">Propriedade Intelectual e estratégia de licenciamento.</span></div>
-        <div class="kpi"><b>I&D</b><br/><span class="muted">Prototipagem rápida e validação técnica.</span></div>
-        <div class="kpi"><b>Go‑to‑Market</b><br/><span class="muted">Parcerias industriais e escala.</span></div>
-      </div>
     </section>
 
     <section id="areas" class="section">
       <h2>Áreas de atuação</h2>
-      <div class="grid">
-        <div class="kpi"><b>Segurança & Autenticação</b><br/><span class="muted">Hardware + software orientados à confiança.</span></div>
-        <div class="kpi"><b>Imaging & IA</b><br/><span class="muted">Pipelines de melhoria de imagem e visão computacional.</span></div>
-        <div class="kpi"><b>Energia & Storage</b><br/><span class="muted">Conceitos de armazenamento e eficiência operacional.</span></div>
+      <div class="grid3">
+        <div class="kpi"><b>Segurança & Autenticação</b><br><span class="lead">Hardware + software orientados à confiança.</span></div>
+        <div class="kpi"><b>Imaging & IA</b><br><span class="lead">Pipelines de melhoria de imagem e visão computacional.</span></div>
+        <div class="kpi"><b>Energia & Storage</b><br><span class="lead">Conceitos de armazenamento e eficiência operacional.</span></div>
       </div>
     </section>
 
-    <section class="section" id="contactos">
+    <section id="contactos" class="section">
       <h2>Contactos</h2>
       <div class="card">
-        <p class="lead" style="margin:0 0 8px">Preferimos comunicação objetiva por email.</p>
+        <p class="lead">Preferimos comunicação objetiva por email.</p>
         <div class="cta">
           <a class="btn primary" href="mailto:admin@trioto.tech">admin@trioto.tech</a>
           <a class="btn" href="mailto:tv@trioto.tech">tv@trioto.tech</a>
         </div>
       </div>
-      <p class="muted" style="color:var(--muted);margin-top:10px">Batalha, Leiria · Portugal</p>
     </section>
 
     <footer>
       <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <span>© <span id="y"></span> TRIOTO · Tecnologia e Patentes</span>
-        <span class="badge" title="Privacidade">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l7 4v5c0 5-3.5 9.7-7 11-3.5-1.3-7-6-7-11V6l7-4z" stroke="currentColor"/></svg>
-          Privacidade por design
-        </span>
+        <a href="mailto:admin@trioto.tech" class="pill">Email</a>
       </div>
     </footer>
   </div>
