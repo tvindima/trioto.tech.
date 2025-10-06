@@ -1,1 +1,0 @@
-# trioto.tech.
