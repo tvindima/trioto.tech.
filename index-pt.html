@@ -1,0 +1,30 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TRIOTO — Tecnologia e Patentes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"><style>:root{--bg:#000;--text:#fff;--muted:#aaa;--accent:#00d3a7;--stroke:#232632}
+*{box-sizing:border-box}html,body{margin:0;background:#000 url('assets/bg.png') center/cover fixed no-repeat;color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+header{position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);z-index:10}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:40px}
+nav{display:flex;gap:22px;font-weight:600}
+nav a{transition:.3s}nav a:hover{color:var(--accent)}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center}
+.hero h1{font-size:72px;margin:0;text-transform:uppercase;letter-spacing:1px}
+.hero p{font-size:18px;color:var(--muted);margin-top:10px}
+.hero button{margin-top:24px;padding:12px 24px;border:2px solid var(--text);background:transparent;color:var(--text);border-radius:30px;font-weight:600;cursor:pointer;transition:.3s}
+.hero button:hover{background:var(--accent);color:#021711;border-color:var(--accent)}
+section{max-width:900px;margin:0 auto;padding:80px 20px;color:var(--text)}
+footer{text-align:center;padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.1)}
+</style></head>
+<body><header><div class="logo"><img src="assets/logo-trioto.jpeg" alt="TRIOTO"><div><b>TRIOTO</b><br><small style="color:var(--muted)">TECNOLOGIA E PATENTES</small></div></div>
+<nav><a href='#sobre'>Sobre</a><a href='#patentes'>Patentes</a><a href='#contactos'>Contactos</a><a href='desafio.html'>Desafio</a><a href='index.html'>EN</a></nav></header>
+<div class='hero'><p>DESDE 2025</p><h1>DESBLOQUEAR<br>O IMPOSSÍVEL</h1>
+<button onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Saiba Mais</button></div>
+<section id='sobre'><h2>Sobre a TRIOTO</h2>
+<p>A TRIOTO – Tecnologia e Patentes dedica-se à investigação, desenvolvimento e proteção de tecnologias avançadas. Cria soluções próprias com aplicação real em vários setores, da energia à segurança digital e à robótica.</p>
+<p>Responsável pelos projetos <b>SIMFE</b>, <b>DRYNE</b> e <b>Pistões Hídricos</b>, reflete o compromisso com a inovação prática, eficiência tecnológica e sustentabilidade industrial.</p>
+<p>Opera a partir de Portugal, com foco em tecnologia própria, propriedade intelectual e engenharia de futuro.</p></section>
+<section id='patentes'><h2>Patentes</h2><p>O portefólio inclui patentes globais em autenticação, armazenamento de energia, imaging e automação.</p></section>
+<section id='contactos'><h2>Contactos</h2><p>Email: <a href='mailto:admin@trioto.tech'>admin@trioto.tech</a></p><p>Localização: Batalha, Leiria — Portugal</p></section>
+<footer>© <span id='y'></span> TRIOTO · Tecnologia e Patentes</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script></body></html>
