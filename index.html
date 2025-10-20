@@ -9,136 +9,73 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg:#0c0c0f;
-      --text:#e8e9ee;
-      --muted:#a7a9b3;
-      --accent:#00d3a7;
-      --stroke:#232632;
-    }
+    :root {--bg:#0c0c0f;--text:#e8e9ee;--muted:#a7a9b3;--accent:#00d3a7;--stroke:#232632;}
     *{box-sizing:border-box;margin:0;padding:0}
-    html,body{
-      height:100%;
-      background:var(--bg) url('assets/bg.png') center/cover fixed no-repeat;
-      color:var(--text);
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    }
-    header{
-      position:fixed;top:0;left:0;width:100%;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:16px 30px;
-      background:rgba(0,0,0,0.6);
-      backdrop-filter:blur(6px);
-      z-index:10;
-    }
+    html,body{height:100%;background:var(--bg) url('assets/bg.png') center/cover fixed no-repeat;color:var(--text);
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;scroll-behavior:smooth;}
+    header{position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;
+      padding:16px 40px;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);z-index:10;}
     .logo{display:flex;align-items:center;gap:10px}
     .logo img{height:70px}
     nav{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
-    nav a{
-      color:var(--text);
-      font-weight:600;
-      text-decoration:none;
-      transition:.2s;
-    }
+    nav a{color:var(--text);font-weight:600;text-decoration:none;transition:.2s}
     nav a:hover{color:var(--accent)}
-    .hero{
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-      height:100vh;text-align:center;padding:0 16px;
-    }
-    .hero h1{
-      font-size:56px;font-weight:800;line-height:1.1;margin-bottom:16px;text-transform:uppercase;
-    }
-    .hero p{
-      font-size:18px;color:var(--muted);margin-bottom:30px;
-    }
-    .btn{
-      padding:12px 26px;
-      border:none;
-      border-radius:10px;
-      background:#fff;
-      color:#000;
-      font-weight:700;
-      font-size:16px;
-      cursor:pointer;
-      transition:.3s;
-    }
-    .btn:hover{opacity:.8}
-    section{
-      max-width:1100px;margin:0 auto;padding:100px 24px;color:var(--text);
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:16px;
-    }
-    .kpi{
-      background:rgba(0,0,0,0.75);
-      border:1px solid var(--stroke);
-      border-radius:12px;
-      padding:18px;
-    }
-    h2{font-size:26px;margin-bottom:12px}
-    footer{
-      text-align:center;padding:40px 0;color:var(--muted);
-      border-top:1px solid rgba(255,255,255,0.1);font-size:14px;
-    }
-    @media(max-width:768px){
-      header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}
-      nav{flex-wrap:wrap;gap:14px}
-      .logo img{height:60px}
-      .hero h1{font-size:40px}
-      .hero p{font-size:16px}
-    }
+    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center;padding:0 16px}
+    .hero h1{font-size:56px;font-weight:800;line-height:1.1;margin-bottom:16px;text-transform:uppercase}
+    .hero p{font-size:18px;color:var(--muted);margin-bottom:30px}
+    .btn{padding:12px 26px;border:none;border-radius:10px;background:#fff;color:#000;font-weight:700;font-size:16px;cursor:pointer;transition:.3s}
+    .btn:hover{opacity:.85}
+    section{max-width:900px;margin:0 auto;padding:100px 24px;color:var(--text)}
+    h2{font-size:26px;margin-bottom:12px;text-align:left}
+    footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1);font-size:14px}
+    @media(max-width:768px){header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}.logo img{height:60px}.hero h1{font-size:40px}.hero p{font-size:16px}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="assets/logo-trioto.png" alt="TRIOTO">
-      <div>
-        <b>TRIOTO</b><br>
-        <small style="color:var(--muted)">TECHNOLOGY & PATENTS</small>
-      </div>
-    </div>
-    <nav>
-      <a href="#areas">Areas</a>
-      <a href="#contact">Contact</a>
-      <a href="#privacy">Privacy</a>
-      <a href="desafio.html" style="color:var(--accent)">Challenge</a>
-      <a href="index-pt.html">PT</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">
+    <img src="assets/logo-trioto.png" alt="TRIOTO">
+    <div><b>TRIOTO</b><br><small style="color:var(--muted)">TECHNOLOGY & PATENTS</small></div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#privacy">Privacy</a>
+    <a href="desafio.html" style="color:var(--accent)">Challenge</a>
+    <a href="index-pt.html">PT</a>
+  </nav>
+</header>
 
-  <main>
-    <div class="hero">
-      <p>SINCE 2025</p>
-      <h1>UNBLOCK<br>THE IMPOSSIBLE</h1>
-      <button class="btn" onclick="document.getElementById('areas').scrollIntoView({behavior:'smooth'})">Learn More</button>
-    </div>
+<main>
+  <div class="hero">
+    <p>SINCE 2025</p>
+    <h1>UNBLOCK<br>THE IMPOSSIBLE</h1>
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn More</button>
+  </div>
 
-    <section id="areas">
-      <h2>Areas of Focus</h2>
-      <div class="grid">
-        <div class="kpi"><b>Security & Authentication</b><br><span>Hardware + software built for trust.</span></div>
-        <div class="kpi"><b>Imaging & AI</b><br><span>Image enhancement & computer vision.</span></div>
-        <div class="kpi"><b>Energy & Storage</b><br><span>Efficiency & storage concepts.</span></div>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About TRIOTO</h2>
+    <p>TRIOTO is dedicated to the research, development, and protection of advanced technologies.
+       It creates proprietary solutions with real-world applications across energy, digital security, and robotics.</p>
+    <p>Responsible for the projects <b>SIMFE</b>, <b>DRYNE</b>, and <b>Hydraulic Pistons</b>, TRIOTO embodies practical innovation,
+       technological efficiency, and industrial sustainability.</p>
+    <p>Operating from Portugal, TRIOTO focuses on proprietary technology, intellectual property, and engineering the future.</p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:admin@trioto.tech" style="color:var(--accent)">admin@trioto.tech</a></p>
-      <p>Email: <a href="mailto:tv@trioto.tech" style="color:var(--accent)">tv@trioto.tech</a></p>
-      <p style="color:var(--muted)">Batalha, Leiria · Portugal</p>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:admin@trioto.tech" style="color:var(--accent)">admin@trioto.tech</a></p>
+    <p>Email: <a href="mailto:tv@trioto.tech" style="color:var(--accent)">tv@trioto.tech</a></p>
+    <p style="color:var(--muted)">Batalha, Leiria · Portugal</p>
+  </section>
 
-    <section id="privacy">
-      <h2>Privacy Policy</h2>
-      <p style="color:var(--muted)">We collect only the minimum necessary to respond to contacts. We do not sell data.</p>
-    </section>
-  </main>
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p style="color:var(--muted)">We collect only the minimum necessary to respond to contacts. We do not sell data.</p>
+  </section>
+</main>
 
-  <footer>© <span id="y"></span> TRIOTO · Technology & Patents</footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<footer>© <span id="y"></span> TRIOTO · Technology & Patents</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>

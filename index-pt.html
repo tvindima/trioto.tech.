@@ -1,87 +1,81 @@
-<!doctype html><html lang="pt"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TRIOTO — Tecnologia e Patentes</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>:root{--bg:#0c0c0f;--card:#111318;--text:#e8e9ee;--muted:#a7a9b3;--accent:#00d3a7;--stroke:#232632}
-*{box-sizing:border-box;max-width:100%}
-html,body{margin:0;background:var(--bg) url('assets/bg.png') center/cover fixed no-repeat;color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1100px;margin:0 auto;padding:16px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--stroke);backdrop-filter:saturate(140%) blur(2px)}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{height:34px}
-.pill{padding:8px 12px;border:1px solid var(--stroke);border-radius:999px;background:transparent;white-space:nowrap;transition:.2s}
-.pill:hover{background:var(--accent);color:#021711}
-.hero{display:grid;grid-template-columns:1fr;gap:16px;align-items:start;padding:48px 0;text-align:left}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);border:1px solid var(--stroke);border-radius:16px;padding:24px}
-h1{font-size:44px;line-height:1.05;margin:0 0 14px}
-p.lead{color:var(--muted);font-size:18px;margin:0 0 18px}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-.btn{padding:12px 16px;border-radius:12px;border:1px solid var(--stroke);background:#151924;cursor:pointer}
-.btn.primary{background:var(--accent);color:#021711;border-color:transparent;font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0 8px}
-.kpi{padding:18px;border:1px solid var(--stroke);border-radius:14px;background:#0f1117}
-.section{padding:8px 0 48px}
-h2{font-size:22px;margin:0 0 12px}
-footer{border-top:1px solid var(--stroke);padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
-@media(max-width:960px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.wrap{padding:18px}}
-@media(max-width:640px){.grid{grid-template-columns:1fr}h1{font-size:36px}}
-</style></head><body>
-<div class="wrap">
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TRIOTO — Tecnologia e Patentes</title>
+  <meta name="description" content="TRIOTO: tecnologia aplicada, propriedade intelectual e patentes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {--bg:#0c0c0f;--text:#e8e9ee;--muted:#a7a9b3;--accent:#00d3a7;--stroke:#232632;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;background:var(--bg) url('assets/bg.png') center/cover fixed no-repeat;color:var(--text);
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;scroll-behavior:smooth;}
+    header{position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;
+      padding:16px 40px;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);z-index:10;}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:70px}
+    nav{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+    nav a{color:var(--text);font-weight:600;text-decoration:none;transition:.2s}
+    nav a:hover{color:var(--accent)}
+    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center;padding:0 16px}
+    .hero h1{font-size:56px;font-weight:800;line-height:1.1;margin-bottom:16px;text-transform:uppercase}
+    .hero p{font-size:18px;color:var(--muted);margin-bottom:30px}
+    .btn{padding:12px 26px;border:none;border-radius:10px;background:#fff;color:#000;font-weight:700;font-size:16px;cursor:pointer;transition:.3s}
+    .btn:hover{opacity:.85}
+    section{max-width:900px;margin:0 auto;padding:100px 24px;color:var(--text)}
+    h2{font-size:26px;margin-bottom:12px;text-align:left}
+    footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1);font-size:14px}
+    @media(max-width:768px){header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}.logo img{height:60px}.hero h1{font-size:40px}.hero p{font-size:16px}}
+  </style>
+</head>
+<body>
 <header>
-  <div class="logo"><img src="assets/logo-trioto.jpeg" alt="TRIOTO"><div><b>TRIOTO</b><br><small style="color:var(--muted)">TECNOLOGIA E PATENTES</small></div></div>
-  <nav style="display:flex;gap:8px;flex-wrap:wrap">
-    <a class="pill" href="#areas">Áreas</a>
-    <a class="pill" href="#contactos">Contactos</a>
-    <a class="pill" href="#privacidade">Privacidade</a>
-    <a class="pill" href="desafio.html" style="background:var(--accent);color:#021711;font-weight:700;border-color:transparent">Desafio</a>
-    <a class="pill" href="index.html">EN</a>
+  <div class="logo">
+    <img src="assets/logo-trioto.png" alt="TRIOTO">
+    <div><b>TRIOTO</b><br><small style="color:var(--muted)">TECNOLOGIA E PATENTES</small></div>
+  </div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#contactos">Contactos</a>
+    <a href="#privacidade">Privacidade</a>
+    <a href="desafio.html" style="color:var(--accent)">Desafio</a>
+    <a href="index.html">EN</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="card">
-    <h1>Tecnologia. Patentes. Execução.</h1>
-    <p class="lead">Desenvolvemos e protegemos tecnologia aplicada. Do conceito ao protótipo. Da patente à operação.</p>
-    <div class="cta">
-      <a class="btn primary" href="mailto:admin@trioto.tech">Falar com a TRIOTO</a>
-      <a class="btn" href="#areas">Áreas de atuação</a>
-    </div>
+<main>
+  <div class="hero">
+    <p>DESDE 2025</p>
+    <h1>DESBLOQUEAR<br>O IMPOSSÍVEL</h1>
+    <button class="btn" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Saiba Mais</button>
   </div>
-  <div class="grid">
-    <div class="kpi"><b>IP</b><br><span class="muted">Propriedade Intelectual e Licenciamento.</span></div>
-    <div class="kpi"><b>I&D</b><br><span class="muted">Prototipagem rápida e validação técnica.</span></div>
-    <div class="kpi"><b>Go‑to‑Market</b><br><span class="muted">Parcerias industriais e escala.</span></div>
-  </div>
-</section>
 
-<section id="areas" class="section">
-  <h2>Áreas de atuação</h2>
-  <div class="grid">
-    <div class="kpi"><b>Segurança & Autenticação</b><br><span class="muted">Hardware + software orientados à confiança.</span></div>
-    <div class="kpi"><b>Imaging & IA</b><br><span class="muted">Pipelines de melhoria de imagem e visão computacional.</span></div>
-    <div class="kpi"><b>Energia & Storage</b><br><span class="muted">Soluções de armazenamento e eficiência.</span></div>
-  </div>
-</section>
+  <section id="sobre">
+    <h2>Sobre a TRIOTO</h2>
+    <p>A <b>TRIOTO – Tecnologia e Patentes</b> dedica-se à investigação, desenvolvimento e proteção de tecnologias avançadas.
+       Cria soluções próprias com aplicação real em vários setores, da energia à segurança digital e à robótica.</p>
+    <p>Responsável pelos projetos <b>SIMFE</b>, <b>DRYNE</b> e <b>Pistões Hídricos</b>, reflete o compromisso com a inovação prática,
+       eficiência tecnológica e sustentabilidade industrial.</p>
+    <p>Opera a partir de Portugal, com foco em tecnologia própria, propriedade intelectual e engenharia de futuro.</p>
+  </section>
 
-<section id="contactos" class="section">
-  <h2>Contactos</h2>
-  <div class="card">
-    <p class="lead">Preferimos comunicação objetiva por email.</p>
-    <div class="cta">
-      <a class="btn primary" href="mailto:admin@trioto.tech">admin@trioto.tech</a>
-      <a class="btn" href="mailto:tv@trioto.tech">tv@trioto.tech</a>
-    </div>
-  </div>
-  <p style="color:var(--muted);margin-top:10px">Batalha, Leiria · Portugal</p>
-</section>
+  <section id="contactos">
+    <h2>Contactos</h2>
+    <p>Email: <a href="mailto:admin@trioto.tech" style="color:var(--accent)">admin@trioto.tech</a></p>
+    <p>Email: <a href="mailto:tv@trioto.tech" style="color:var(--accent)">tv@trioto.tech</a></p>
+    <p style="color:var(--muted)">Batalha, Leiria · Portugal</p>
+  </section>
 
-<section id="privacidade" class="section">
-  <h2>Política de Privacidade</h2>
-  <div class="card"><p class="lead">Recolhemos apenas o mínimo necessário para responder aos contactos. Não vendemos dados.</p></div>
-</section>
+  <section id="privacidade">
+    <h2>Política de Privacidade</h2>
+    <p style="color:var(--muted)">Recolhemos apenas o mínimo necessário para responder aos contactos. Não vendemos dados.</p>
+  </section>
+</main>
 
 <footer>© <span id="y"></span> TRIOTO · Tecnologia e Patentes</footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</div></body></html>
+</body>
+</html>
