@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lança um Desafio à TRIOTO</title>
+  <title>Submit a Challenge to TRIOTO</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{--bg:#0c0c0f;--card:#111318;--text:#e8e9ee;--muted:#a7a9b3;--accent:#00d3a7;--stroke:#232632}
@@ -20,7 +20,7 @@
     button{padding:12px 16px;border:none;border-radius:10px;background:var(--accent);color:#021711;font-weight:700;font-size:16px;cursor:pointer}
     button:hover{opacity:.9}
     footer{text-align:center;padding:20px 0;color:var(--muted);font-size:13px;margin-top:40px;border-top:1px solid var(--stroke)}
-    a.voltar{color:var(--accent);text-decoration:none;font-weight:600}
+    a.back{color:var(--accent);text-decoration:none;font-weight:600}
   </style>
 </head>
 <body>
@@ -28,35 +28,35 @@
     <header>
       <div class="brand">
         <img src="assets/logo-trioto.png" alt="TRIOTO">
-        <div><b>TRIOTO</b><br><small style="color:var(--muted)">TECNOLOGIA E PATENTES</small></div>
+        <div><b>TRIOTO</b><br><small style="color:var(--muted)">TECHNOLOGY & PATENTS</small></div>
       </div>
-      <a href="index-pt.html" class="voltar">Voltar</a>
+      <a href="index.html" class="back">Back</a>
     </header>
 
-    <h1>Lança um Desafio à TRIOTO</h1>
+    <h1>Submit a Challenge to TRIOTO</h1>
 
     <div class="intro">
-      <p>Acreditas que há algo que devia ser inventado — mas ainda não existe?</p>
-      <p>A TRIOTO procura ideias com impacto real. Se a tua sugestão gerar um projeto viável, serás associado(a) à patente e poderás beneficiar financeiramente dos direitos.</p>
-      <p>Cada proposta é avaliada internamente, sob confidencialidade, com base na originalidade e aplicabilidade.</p>
-      <p>O processo é gratuito e transparente.</p>
-      <p><b>Lança o teu desafio.</b> A próxima grande invenção pode começar contigo.</p>
+      <p>Do you believe there’s something that should have been invented — but hasn’t yet?</p>
+      <p>TRIOTO is looking for ideas with real impact. If your suggestion results in a viable project, you will be associated with the patent and may benefit financially from the rights.</p>
+      <p>Each proposal is evaluated internally, under confidentiality, based on originality and applicability.</p>
+      <p>The process is free and transparent.</p>
+      <p><b>Submit your challenge.</b> The next great invention could start with you.</p>
     </div>
 
     <div class="card">
       <form action="https://formspree.io/f/mqayozoa" method="POST">
-        <label>Nome*</label>
-        <input type="text" name="Nome" required>
+        <label>Name*</label>
+        <input type="text" name="Name" required>
         <label>Email*</label>
         <input type="email" name="Email" required>
-        <label>Descreve a tua ideia*</label>
-        <textarea name="Ideia" rows="6" required></textarea>
-        <label><input type="checkbox" required> Confirmo que esta ideia é minha e aceito que seja avaliada pela TRIOTO.</label>
-        <button type="submit">Enviar Ideia</button>
+        <label>Describe your idea*</label>
+        <textarea name="Idea" rows="6" required></textarea>
+        <label><input type="checkbox" required> I confirm that this idea is mine and I agree to have it evaluated by TRIOTO.</label>
+        <button type="submit">Submit Idea</button>
       </form>
     </div>
 
-    <footer>© <span id="y"></span> TRIOTO · Tecnologia e Patentes</footer>
+    <footer>© <span id="y"></span> TRIOTO · Technology & Patents</footer>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
