@@ -45,12 +45,14 @@
 
     <div class="card">
       <form action="https://formspree.io/f/mqayozoa" method="POST">
+        <input type="hidden" name="_subject" value="Nova Ideia de Desafio - TRIOTO">
+        <input type="text" name="_gotcha" style="display:none">
         <label>Nome*</label>
-        <input type="text" name="Nome" required>
+        <input type="text" name="name" required>
         <label>Email*</label>
-        <input type="email" name="Email" required>
+        <input type="email" name="email" required>
         <label>Descreve a tua ideia*</label>
-        <textarea name="Ideia" rows="6" required></textarea>
+        <textarea name="message" rows="6" required></textarea>
         <label><input type="checkbox" required> Confirmo que esta ideia é minha e aceito que seja avaliada pela TRIOTO.</label>
         <button type="submit">Enviar Ideia</button>
       </form>
