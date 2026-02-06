@@ -25,6 +25,12 @@
     .hero p{font-size:18px;color:var(--muted);margin-bottom:30px}
     .btn{padding:12px 26px;border:none;border-radius:10px;background:#fff;color:#000;font-weight:700;font-size:16px;cursor:pointer;transition:.3s}
     .btn:hover{opacity:.85}
+    .logo-strip{margin-top:50px;text-align:center}
+    .logo-strip p{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:16px;font-weight:600}
+    .logo-strip .logos{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+    .logo-strip .logos a,.logo-strip .logos span{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:12px 18px;transition:all .3s;text-decoration:none}
+    .logo-strip .logos a:hover{background:rgba(255,255,255,0.08);border-color:var(--accent);transform:translateY(-2px)}
+    .logo-strip .logos img{height:36px;width:auto;object-fit:contain;filter:brightness(1.1)}
     section{max-width:900px;margin:0 auto;padding:100px 24px;color:var(--text)}
     h2{font-size:26px;margin-bottom:12px;text-align:left}
     .section-subtitle{color:var(--muted);font-size:16px;margin-bottom:40px}
@@ -69,6 +75,16 @@
     <p>DESDE 2025</p>
     <h1>DESBLOQUEAR<br>O IMPOSSÍVEL</h1>
     <button class="btn" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Saiba Mais</button>
+
+    <div class="logo-strip">
+      <p>Os Nossos Projetos</p>
+      <div class="logos">
+        <a href="https://crmplus.trioto.tech/" target="_blank" rel="noopener" title="CRM PLUS — CRM Imobiliário"><img src="assets/logo-crmplus.svg" alt="CRM PLUS"></a>
+        <a href="https://www.apokaliptika.com/" target="_blank" rel="noopener" title="APOKALIPTIKA — Sistema de Crise e Resiliência"><img src="assets/logo-apokaliptika.png" alt="APOKALIPTIKA"></a>
+        <a href="#projetos" title="Hybrid Plant — Plataforma PRM"><img src="assets/logo-hybridplant.png" alt="Hybrid Plant"></a>
+        <a href="#projetos" title="SIMFE — SIM card · SAFE data"><img src="assets/logo-simfe.png" alt="SIMFE"></a>
+      </div>
+    </div>
   </div>
 
   <section id="sobre">
