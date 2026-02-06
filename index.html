@@ -17,6 +17,10 @@
       padding:16px 40px;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);z-index:10;}
     .logo{display:flex;align-items:center;gap:10px}
     .logo img{height:70px}
+    .deps{display:flex;align-items:center;gap:10px;margin-left:20px;padding-left:20px;border-left:1px solid rgba(255,255,255,0.12)}
+    .deps a{display:flex;align-items:center;opacity:.55;transition:opacity .3s,transform .3s}
+    .deps a:hover{opacity:1;transform:scale(1.1)}
+    .deps img{height:26px;width:auto;object-fit:contain}
     nav{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
     nav a{color:var(--text);font-weight:600;text-decoration:none;transition:.2s}
     nav a:hover{color:var(--accent)}
@@ -45,7 +49,7 @@
     .card-link:hover{opacity:.8}
     .ip-tag{font-size:11px;color:var(--muted);opacity:.7}
     footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1);font-size:14px}
-    @media(max-width:768px){header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}.logo img{height:60px}.hero h1{font-size:40px}.hero p{font-size:16px}.projects-grid{grid-template-columns:1fr}}
+    @media(max-width:768px){header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}.logo img{height:60px}.deps{margin-left:0;padding-left:0;border-left:none;margin-top:4px}.deps img{height:20px}.hero h1{font-size:40px}.hero p{font-size:16px}.projects-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -53,6 +57,12 @@
   <div class="logo">
     <img src="assets/logo-trioto.png" alt="TRIOTO">
     <div><b>TRIOTO</b><br><small style="color:var(--muted)">TECHNOLOGY & PATENTS</small></div>
+    <div class="deps">
+      <a href="https://crmplus.trioto.tech/" target="_blank" rel="noopener" title="CRM PLUS"><img src="assets/logo-crmplus.svg" alt="CRM PLUS"></a>
+      <a href="https://www.apokaliptika.com/" target="_blank" rel="noopener" title="APOKALIPTIKA"><img src="assets/logo-apokaliptika.png" alt="APOKALIPTIKA"></a>
+      <a href="#projects" title="Hybrid Plant"><img src="assets/logo-hybridplant.png" alt="Hybrid Plant"></a>
+      <a href="#projects" title="SIMFE"><img src="assets/logo-simfe.png" alt="SIMFE"></a>
+    </div>
   </div>
   <nav>
     <a href="#about">About</a>
