@@ -2,13 +2,19 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, validator
 from api.forex_api import SimulatedForexAPI
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
 # Add CORS middleware for security
+# NOTE: In production, replace ["*"] with specific allowed origins like ["https://trioto.tech"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify exact origins
+    allow_origins=["*"],  # TODO: Configure specific origins in production
     allow_credentials=True,
     allow_methods=["POST"],
     allow_headers=["*"],
@@ -41,8 +47,10 @@ def open_order(req: OrderRequest):
             "size": api.open_trade["size"]
         }
     except ValueError as e:
+        logger.warning(f"Invalid order request: {e}")
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+        logger.error(f"Error opening order: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
 
 @app.post("/simulate")
@@ -52,6 +60,8 @@ def simulate():
         api.simulate_market_and_close()
         return {"balance": api.balance}
     except ValueError as e:
+        logger.warning(f"Invalid simulation request: {e}")
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+        logger.error(f"Error during simulation: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
