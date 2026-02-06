@@ -8,15 +8,32 @@ class SimulatedForexAPI:
         self.open_trade = None
 
     def open_order(self, pair, entry_price, tp_percent, sl_percent):
+        # Input validation
+        if not pair or not isinstance(pair, str):
+            raise ValueError("Par inválido: deve ser uma string não vazia.")
+        if entry_price <= 0:
+            raise ValueError("Preço de entrada inválido: deve ser positivo.")
+        if tp_percent < 0 or tp_percent > 1:
+            raise ValueError("Percentagem de take profit inválida: deve estar entre 0 e 1.")
+        if sl_percent > 0 or sl_percent < -1:
+            raise ValueError("Percentagem de stop loss inválida: deve estar entre -1 e 0.")
+        
         # Não permitir mais do que uma ordem aberta ao mesmo tempo
         if self.open_trade is not None:
             raise ValueError("Já existe uma ordem aberta.")
+        
         # Calcula o montante a arriscar com base no saldo e no risco
         risk_amount = self.balance * self.risk_percent
         sl_distance = abs(sl_percent) * entry_price
+        
+        # Prevent division by zero
+        if sl_distance == 0:
+            raise ValueError("Distância de stop loss não pode ser zero.")
+        
         size = risk_amount / sl_distance
         tp_price = entry_price * (1 + tp_percent)
         sl_price = entry_price * (1 + sl_percent)
+        
         self.open_trade = {
             "pair": pair,
             "entry_price": entry_price,
