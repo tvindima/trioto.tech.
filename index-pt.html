@@ -27,8 +27,24 @@
     .btn:hover{opacity:.85}
     section{max-width:900px;margin:0 auto;padding:100px 24px;color:var(--text)}
     h2{font-size:26px;margin-bottom:12px;text-align:left}
+    .section-subtitle{color:var(--muted);font-size:16px;margin-bottom:40px}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-top:30px}
+    .project-card{background:rgba(17,19,24,0.85);border:1px solid var(--stroke);border-radius:16px;padding:28px 24px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+    .project-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 8px 30px rgba(0,211,167,0.08)}
+    .project-card .card-icon{font-size:32px;margin-bottom:14px;display:block}
+    .project-card h3{font-size:20px;font-weight:700;margin-bottom:6px;color:var(--text)}
+    .project-card .tagline{font-size:13px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+    .project-card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+    .badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+    .badge-active{background:rgba(0,211,167,0.15);color:#00d3a7}
+    .badge-dev{background:rgba(255,193,7,0.15);color:#ffc107}
+    .badge-soon{background:rgba(100,120,255,0.15);color:#8b9aff}
+    .card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--stroke)}
+    .card-link{color:var(--accent);font-weight:600;font-size:13px;text-decoration:none;transition:.2s}
+    .card-link:hover{opacity:.8}
+    .ip-tag{font-size:11px;color:var(--muted);opacity:.7}
     footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1);font-size:14px}
-    @media(max-width:768px){header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}.logo img{height:60px}.hero h1{font-size:40px}.hero p{font-size:16px}}
+    @media(max-width:768px){header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}.logo img{height:60px}.hero h1{font-size:40px}.hero p{font-size:16px}.projects-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -39,6 +55,7 @@
   </div>
   <nav>
     <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
     <a href="#contactos">Contactos</a>
     <a href="#privacidade">Privacidade</a>
     <a href="desafio.html" style="color:var(--accent)">Desafio</a>
@@ -60,6 +77,87 @@
     <p>Responsável pelos projetos <b>SIMFE</b>, <b>DRYNE</b> e <b>Pistões Hídricos</b>, reflete o compromisso com a inovação prática,
        eficiência tecnológica e sustentabilidade industrial.</p>
     <p>Opera a partir de Portugal, com foco em tecnologia própria, propriedade intelectual e engenharia de futuro.</p>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos & Propriedade Intelectual</h2>
+    <p class="section-subtitle">Tecnologias desenvolvidas, geridas e comercializadas pela TRIOTO. Toda a propriedade intelectual, desenvolvimento e operações são inteiramente nossos.</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <span class="card-icon">🏢</span>
+        <h3>CRM PLUS</h3>
+        <div class="tagline">Plataforma CRM Imobiliário</div>
+        <p>CRM avançado para agências imobiliárias — gestão de leads, automação inteligente, colaboração entre equipas, assistente IA e analytics integrado.</p>
+        <span class="badge badge-active">● Ativo</span>
+        <div class="card-footer">
+          <a href="https://crmplus.trioto.tech/" target="_blank" rel="noopener" class="card-link">Visitar Plataforma →</a>
+          <span class="ip-tag">PI TRIOTO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="card-icon">🛡️</span>
+        <h3>APOKALIPTIKA</h3>
+        <div class="tagline">Sistema Operacional de Crise</div>
+        <p>Plataforma operacional de comando e controlo para situações de crise — coordenação multi-entidade, mapa operacional unificado, arquitetura offline-first.</p>
+        <span class="badge badge-dev">● Em Desenvolvimento</span>
+        <div class="card-footer">
+          <a href="https://www.apokaliptika.com/" target="_blank" rel="noopener" class="card-link">Visitar Plataforma →</a>
+          <span class="ip-tag">PI TRIOTO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="card-icon">🌱</span>
+        <h3>Hybrid Plant</h3>
+        <div class="tagline">Energia Sustentável</div>
+        <p>Sistema híbrido de geração de energia que combina múltiplas fontes renováveis para produção energética otimizada, resiliente e descentralizada.</p>
+        <span class="badge badge-dev">● Em Desenvolvimento</span>
+        <div class="card-footer">
+          <span class="card-link" style="opacity:.5">Em Breve</span>
+          <span class="ip-tag">PI TRIOTO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="card-icon">🔍</span>
+        <h3>SearchFlow</h3>
+        <div class="tagline">Vigilância de Concursos Públicos</div>
+        <p>Plataforma inteligente de monitorização de concursos públicos — alertas automáticos, filtragem avançada e rastreamento de oportunidades.</p>
+        <span class="badge badge-dev">● Em Desenvolvimento</span>
+        <div class="card-footer">
+          <span class="card-link" style="opacity:.5">Em Breve</span>
+          <span class="ip-tag">PI TRIOTO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="card-icon">⚡</span>
+        <h3>SIMFE</h3>
+        <div class="tagline">Sistema Energético Avançado</div>
+        <p>Tecnologia energética proprietária focada em eficiência e inovação aplicada para sustentabilidade industrial.</p>
+        <span class="badge badge-dev">● Em Desenvolvimento</span>
+        <div class="card-footer">
+          <span class="card-link" style="opacity:.5">Em Breve</span>
+          <span class="ip-tag">Patente TRIOTO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="card-icon">💧</span>
+        <h3>Pistões Hídricos</h3>
+        <div class="tagline">Engenharia Industrial</div>
+        <p>Sistemas de pistões hidráulicos de nova geração, projetados para desempenho superior, durabilidade e aplicações industriais.</p>
+        <span class="badge badge-dev">● Em Desenvolvimento</span>
+        <div class="card-footer">
+          <span class="card-link" style="opacity:.5">Em Breve</span>
+          <span class="ip-tag">Patente TRIOTO</span>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section id="contactos">
