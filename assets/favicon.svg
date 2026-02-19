@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .s{fill:none;stroke:#00d3a7;stroke-width:8;stroke-linejoin:round}
+      .n{fill:#00d3a7}
+    </style>
+  </defs>
+  <polygon class="s" points="50,12 88,88 12,88"/>
+  <circle class="n" cx="50" cy="12" r="6"/>
+  <circle class="n" cx="88" cy="88" r="6"/>
+  <circle class="n" cx="12" cy="88" r="6"/>
+</svg>
+
