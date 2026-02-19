@@ -60,14 +60,10 @@
     .skip{position:absolute;left:-999px;top:10px;z-index:999;background:#fff;color:#000;padding:10px 12px;border-radius:10px;font-weight:700}
     .skip:focus{left:10px}
     header{position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;
-      padding:16px 28px;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:1000;}
+      padding:14px 24px;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:1000;}
     .logo{display:flex;align-items:center;gap:10px}
-    .logo img{height:70px}
-    .deps{display:flex;align-items:center;gap:10px;margin-left:14px;padding-left:14px;border-left:1px solid rgba(255,255,255,0.12);max-width:320px;overflow:hidden}
-    .deps a{display:flex;align-items:center;opacity:.65;transition:opacity .3s,transform .3s}
-    .deps a:hover{opacity:1;transform:scale(1.08)}
-    .deps img{height:26px;width:auto;object-fit:contain}
-    nav{display:flex;flex-wrap:wrap;gap:20px;align-items:center;flex-shrink:0}
+    .logo img{height:56px}
+    nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;flex-shrink:0}
     nav a{color:var(--text);font-weight:600;text-decoration:none;transition:.2s}
     nav a:hover{color:var(--accent)}
     .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center;padding:0 16px}
@@ -96,18 +92,15 @@
     .ip-tag{font-size:11px;color:var(--muted);opacity:.7}
     footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1);font-size:14px}
     a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.deps a,.project-card,.btn{transition:none}}
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.project-card,.btn{transition:none}}
     @media(max-width:1200px){
       header{padding:14px 20px}
-      .deps{display:none}
-      nav{gap:14px}
+      nav{gap:12px}
     }
     @media(max-width:768px){
       html,body{background-attachment:scroll}
       header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}
-      .logo img{height:60px}
-      .deps{margin-left:0;padding-left:0;border-left:none;margin-top:4px}
-      .deps img{height:30px}
+      .logo img{height:48px}
       .hero h1{font-size:40px}
       .hero p{font-size:16px}
       .projects-grid{grid-template-columns:1fr}
@@ -120,12 +113,6 @@
   <div class="logo">
     <img src="assets/logo-trioto.png" alt="TRIOTO" width="3282" height="3748">
     <div><b>TRIOTO</b><br><small style="color:var(--muted)">TECNOLOGIA E PATENTES</small></div>
-    <div class="deps">
-      <a href="https://crmplus.trioto.tech/" target="_blank" rel="noopener" title="CRMPLUS"><img src="assets/logo-crmplus-official.png" alt="CRMPLUS" width="6497" height="5827"></a>
-      <a href="https://www.apokaliptika.com/" target="_blank" rel="noopener" title="APOK"><img src="assets/logo-apok-official.png" alt="APOK" width="6497" height="5827"></a>
-      <a href="#projetos" title="Hybrid Plant"><img src="assets/logo-hybridplant-official.png" alt="Hybrid Plant" width="6497" height="5827"></a>
-      <a href="#projetos" title="SIMFE"><img src="assets/logo-simfe-official.png" alt="SIMFE" width="6497" height="5827"></a>
-    </div>
   </div>
   <nav aria-label="Primaria">
     <a href="#sobre">Sobre</a>
