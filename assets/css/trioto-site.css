@@ -99,14 +99,17 @@ a {
 
 .brand-link {
   display: inline-flex;
+  height: 100%;
   align-items: center;
   gap: 8px;
   text-decoration: none;
 }
 
 .brand-logo {
-  width: 194px;
-  height: auto;
+  width: auto;
+  height: clamp(34px, calc(var(--header-height) - 16px), 48px);
+  max-width: 212px;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -561,10 +564,14 @@ footer[id] {
   position: relative;
   isolation: isolate;
   margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  width: min(1120px, 100%);
   display: grid;
   grid-template-columns: repeat(7, minmax(94px, 1fr));
-  gap: 17px 13px;
+  gap: 14px 11px;
   align-items: center;
+  justify-items: center;
   padding: 18px 8px 14px;
   grid-template-areas:
     "crm apok . trioto . hybrid tria"
@@ -626,9 +633,10 @@ footer[id] {
 .hex-tile {
   clip-path: polygon(25% 4%, 75% 4%, 98% 50%, 75% 96%, 25% 96%, 2% 50%);
   border: 1px solid rgba(30, 34, 42, 0.31);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.07) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
   backdrop-filter: blur(1.5px);
   box-shadow: 0 8px 20px rgba(30, 34, 42, 0.08);
+  width: min(166px, 100%);
   min-height: 154px;
   padding: 14px 12px;
   display: flex;
@@ -682,16 +690,24 @@ footer[id] {
 }
 
 .hex-tile.center {
+  width: min(258px, 100%);
   min-height: 302px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.12) 100%);
+  padding: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 100%);
   border-color: rgba(224, 32, 32, 0.38);
   box-shadow: 0 20px 42px rgba(30, 34, 42, 0.14);
+  display: grid;
+  place-items: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .hex-tile.center .hex-logo {
-  width: 176px;
+  width: 154px;
   height: auto;
-  max-width: 80%;
+  max-width: 74%;
+  margin: 0 auto;
+  display: block;
 }
 
 .hex-tile.center .hex-title {
@@ -714,6 +730,15 @@ footer[id] {
   );
   background-size: cover;
   background-position: center;
+  filter: brightness(0.94) saturate(0.92);
+}
+
+.featured-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(245, 242, 236, 0.56) 0%, rgba(245, 242, 236, 0.44) 100%);
 }
 
 .featured-grid {
@@ -726,8 +751,8 @@ footer[id] {
 .system-card {
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.48) 0%, rgba(247, 243, 235, 0.34) 100%);
-  backdrop-filter: blur(var(--glass-blur));
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.34) 0%, rgba(247, 243, 235, 0.2) 100%);
+  backdrop-filter: blur(4px);
   box-shadow: var(--shadow-sm);
   padding: 16px;
   display: flex;
@@ -1508,7 +1533,8 @@ footer[id] {
   }
 
   .brand-logo {
-    width: 168px;
+    height: 40px;
+    max-width: 178px;
   }
 
   .menu-toggle {
@@ -1593,7 +1619,7 @@ footer[id] {
       "triobid simfe"
       "homeflix gem"
       "triot trigoritmo";
-    gap: 11px;
+    gap: 10px;
   }
 
   .hex-tile {
@@ -1616,7 +1642,7 @@ footer[id] {
   }
 
   .hex-tile.center .hex-logo {
-    width: 120px;
+    width: 108px;
     height: auto;
   }
 
@@ -1672,7 +1698,8 @@ footer[id] {
   }
 
   .brand-logo {
-    width: 148px;
+    height: 36px;
+    max-width: 156px;
   }
 
   .challenge-content {
