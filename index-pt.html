@@ -2,303 +2,437 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>TRIOTO — Tecnologia e Patentes</title>
-  <meta name="description" content="TRIOTO: tecnologia aplicada, propriedade intelectual e patentes.">
-  <meta name="theme-color" content="#0c0c0f">
-  <meta name="color-scheme" content="dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRIOTO — Tecnologia, IP e Sistemas Operacionais</title>
+  <meta name="description" content="A TRIOTO desenvolve, detém e opera sistemas tecnológicos proprietários com propriedade intelectual própria em IA, cibersegurança e plataformas operacionais.">
+  <meta name="keywords" content="tecnologia proprietária, propriedade intelectual, sistemas tecnológicos, deep tech, IA, cibersegurança, plataformas operacionais, TRIOTO">
+  <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://trioto.tech/index-pt.html">
   <link rel="alternate" hreflang="en" href="https://trioto.tech/">
   <link rel="alternate" hreflang="pt" href="https://trioto.tech/index-pt.html">
   <link rel="alternate" hreflang="x-default" href="https://trioto.tech/">
+
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/favicon-16.png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta property="og:title" content="TRIOTO — Tecnologia e Patentes">
-  <meta property="og:description" content="Tecnologia aplicada, propriedade intelectual e patentes.">
+
+  <meta property="og:title" content="TRIOTO — Tecnologia, IP e Sistemas Operacionais">
+  <meta property="og:description" content="Sistemas integrados. Inteligência unificada. Impacto real.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trioto.tech/index-pt.html">
-  <meta property="og:image" content="https://trioto.tech/assets/og.png">
+  <meta property="og:image" content="https://trioto.tech/assets/backgrounds/01_hero_landing_bg_with_3d_trioto_emblem.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TRIOTO — Tecnologia e Patentes">
-  <meta name="twitter:description" content="Tecnologia aplicada, propriedade intelectual e patentes.">
-  <meta name="twitter:image" content="https://trioto.tech/assets/og.png">
+  <meta name="twitter:title" content="TRIOTO — Tecnologia, IP e Sistemas Operacionais">
+  <meta name="twitter:description" content="Sistemas tecnológicos proprietários, IP própria e execução em contexto real.">
+  <meta name="twitter:image" content="https://trioto.tech/assets/backgrounds/01_hero_landing_bg_with_3d_trioto_emblem.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/trioto-site.css">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "TRIOTO",
-    "url": "https://trioto.tech/",
-    "logo": "https://trioto.tech/assets/icon-512.png",
-    "email": "admin@trioto.tech"
+    "url": "https://trioto.tech",
+    "logo": "https://trioto.tech/assets/logo-trioto-horizontal-official-black.png",
+    "email": "admin@trioto.tech",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Batalha",
+      "addressRegion": "Leiria",
+      "addressCountry": "PT"
+    }
   }
   </script>
-  <style>
-    :root {--bg:#0c0c0f;--text:#e8e9ee;--muted:#a7a9b3;--accent:#00d3a7;--stroke:#232632;}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{
-      height:100%;
-      color:var(--text);
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      scroll-behavior:smooth;
-      background-color:var(--bg);
-      background-image:url('assets/bg.png');
-      background-image:image-set(
-        url('assets/bg.webp') type('image/webp') 1x,
-        url('assets/bg.png') type('image/png') 1x
-      );
-      background-position:center;
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
-    }
-    .skip{position:absolute;left:-999px;top:10px;z-index:999;background:#fff;color:#000;padding:10px 12px;border-radius:10px;font-weight:700}
-    .skip:focus{left:10px}
-    header{position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;
-      padding:14px 24px;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:1000;}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo img{height:74px;width:auto}
-    .project-medals{display:flex;align-items:center;gap:8px;margin-left:10px}
-    .medal{display:inline-flex;align-items:center;justify-content:center}
-    .medal img{width:60px;height:60px;object-fit:contain;display:block}
-    nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;flex-shrink:0}
-    nav a{color:var(--text);font-weight:600;text-decoration:none;transition:.2s}
-    nav a:hover{color:var(--accent)}
-    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center;padding:0 16px}
-    .hero h1{font-size:56px;font-weight:800;line-height:1.1;margin-bottom:16px;text-transform:uppercase}
-    .hero p{font-size:18px;color:var(--muted);margin-bottom:30px}
-    .btn{padding:12px 26px;border:none;border-radius:10px;background:#fff;color:#000;font-weight:700;font-size:16px;cursor:pointer;transition:.3s}
-    .btn:hover{opacity:.85}
-    section{max-width:900px;margin:0 auto;padding:100px 24px;color:var(--text);scroll-margin-top:120px}
-    h2{font-size:26px;margin-bottom:12px;text-align:left}
-    .section-subtitle{color:var(--muted);font-size:16px;margin-bottom:40px}
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-top:30px}
-    .project-card{background:rgba(17,19,24,0.85);border:1px solid var(--stroke);border-radius:16px;padding:28px 24px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
-    .project-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 8px 30px rgba(0,211,167,0.08)}
-    .project-card .card-icon{font-size:32px;margin-bottom:14px;display:block}
-    .project-card .card-logo{height:56px;width:auto;margin-bottom:14px;display:block;object-fit:contain}
-    .project-card h3{font-size:20px;font-weight:700;margin-bottom:6px;color:var(--text)}
-    .project-card .tagline{font-size:13px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
-    .project-card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:16px}
-    .badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-    .badge-active{background:rgba(0,211,167,0.15);color:#00d3a7}
-    .badge-dev{background:rgba(255,193,7,0.15);color:#ffc107}
-    .badge-soon{background:rgba(100,120,255,0.15);color:#8b9aff}
-    .card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--stroke)}
-    .card-link{color:var(--accent);font-weight:600;font-size:13px;text-decoration:none;transition:.2s}
-    .card-link:hover{opacity:.8}
-    .ip-tag{font-size:11px;color:var(--muted);opacity:.7}
-    footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1);font-size:14px}
-    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.project-card,.btn{transition:none}}
-    @media(max-width:1200px){
-      header{padding:14px 20px}
-      nav{gap:12px}
-      .project-medals a:nth-child(n+7){display:none}
-    }
-    @media(max-width:1100px){.medal img{width:52px;height:52px}}
-    @media(max-width:980px){.project-medals{display:none}}
-    @media(max-width:768px){
-      html,body{background-attachment:scroll}
-      header{flex-direction:column;align-items:flex-start;padding:14px 20px;gap:10px}
-      .logo img{height:48px}
-      .hero h1{font-size:40px}
-      .hero p{font-size:16px}
-      .projects-grid{grid-template-columns:1fr}
-    }
-  </style>
 </head>
 <body>
-<a class="skip" href="#main">Saltar para o conteudo</a>
-<header>
-  <div class="logo">
-    <img src="assets/logo-trioto-official-white.png" alt="TRIOTO" width="4439" height="5057">
-    <div class="project-medals" aria-label="Projetos TRIOTO">
-      <a class="medal" href="https://crmplus.trioto.tech/" target="_blank" rel="noopener" title="CRMPLUS"><img src="assets/logo-crmplus-official.png" alt="CRMPLUS"></a>
-      <a class="medal" href="https://www.apokaliptika.com/" target="_blank" rel="noopener" title="APOK"><img src="assets/logo-apok-official.png" alt="APOK"></a>
-      <a class="medal" href="#projetos" title="HYBRID PLANT"><img src="assets/logo-hybridplant-official.png" alt="HYBRID PLANT"></a>
-      <a class="medal" href="#projetos" title="SearchFlow"><img src="assets/logo-searchflow-official.png" alt="SearchFlow"></a>
-      <a class="medal" href="#projetos" title="SIMFE"><img src="assets/logo-simfe-official.png" alt="SIMFE"></a>
-      <a class="medal" href="#projetos" title="TRIA"><img src="assets/logo-tria-official.png" alt="TRIA"></a>
-      <a class="medal" href="#projetos" title="TR.IOT"><img src="assets/logo-triot-official.png" alt="TR.IOT"></a>
-      <a class="medal" href="#projetos" title="TRIGORITMO"><img src="assets/logo-trigoritmo-official.png" alt="TRIGORITMO"></a>
-      <a class="medal" href="#projetos" title="homeflix.im"><img src="assets/logo-homeflix-official.png" alt="homeflix.im"></a>
-      <a class="medal" href="#projetos" title="GEM"><img src="assets/logo-gem-official.png" alt="GEM"></a>
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-link" href="index-pt.html" aria-label="Início TRIOTO">
+        <img class="brand-logo" src="assets/logo-trioto-horizontal-official-black.png" alt="TRIOTO">
+        <span class="brand-text">
+          <span class="brand-name">Technology & Intent</span>
+          <span class="brand-tagline">Sistemas Proprietários</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir navegação" aria-expanded="false" aria-controls="primary-nav">☰</button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primária">
+        <a class="nav-link" href="#sobre">Sobre</a>
+        <a class="nav-link" href="#sistemas">Sistemas</a>
+        <a class="nav-link" href="#ip-patentes">IP &amp; Patentes</a>
+        <a class="nav-link" href="desafio.html">Desafio</a>
+        <a class="nav-link" href="#contacto">Contacto</a>
+        <a class="nav-link" href="#noticias">Notícias</a>
+
+        <details class="lang-switch">
+          <summary>PT ▾</summary>
+          <div class="lang-menu">
+            <a href="index-pt.html" aria-current="page">Português</a>
+            <a href="index.html" lang="en">English</a>
+          </div>
+        </details>
+      </nav>
     </div>
-  </div>
-  <nav aria-label="Primaria">
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contactos">Contactos</a>
-    <a href="#privacidade">Privacidade</a>
-    <a href="desafio.html" style="color:var(--accent)">Desafio</a>
-    <a href="index.html">EN</a>
-  </nav>
-</header>
+  </header>
 
-<main id="main">
-  <div class="hero">
-    <p>DESDE 2025</p>
-    <h1>DESBLOQUEAR<br>O IMPOSSÍVEL</h1>
-    <button class="btn" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Saiba Mais</button>
-  </div>
+  <main id="main">
+    <section class="section-shell home-hero" data-parallax>
+      <div class="section-bg" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal" data-reveal>
+          <p class="eyebrow">Desde 2025</p>
+          <h1 class="hero-title"><span class="hero-line">Desbloquear o</span><span class="hero-line">impossível</span></h1>
+          <p class="hero-lead">A TRIOTO desenvolve, detém e opera sistemas tecnológicos proprietários que resolvem desafios complexos em vários setores, da operação crítica à automação inteligente e infraestrutura digital.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#sistemas">Explorar Sistemas</a>
+            <a class="btn btn-secondary" href="desafio.html">Submeter um Desafio</a>
+          </div>
+        </div>
 
-  <section id="sobre">
-    <h2>Sobre a TRIOTO</h2>
-    <p>A <b>TRIOTO – Tecnologia e Patentes</b> dedica-se à investigação, desenvolvimento e proteção de tecnologias avançadas.
-       Cria soluções próprias com aplicação real em vários setores, da energia à segurança digital e à robótica.</p>
-    <p>Responsável pelos projetos <b>CRMPLUS</b>, <b>APOK</b>, <b>SIMFE</b>, <b>TRIA</b>, <b>TR.IOT</b> e <b>TRIGORITMO</b>, reflete o compromisso com a inovação prática,
-       eficiência tecnológica e sustentabilidade industrial.</p>
-    <p>Opera a partir de Portugal, com foco em tecnologia própria, propriedade intelectual e engenharia de futuro.</p>
-  </section>
+        <aside class="hero-metrics reveal" data-reveal aria-label="Indicadores principais da TRIOTO">
+          <div class="metric">
+            <p class="metric-label">IP Proprietária</p>
+            <p class="metric-value">100% Detida<br>e Controlada</p>
+          </div>
+          <div class="metric">
+            <p class="metric-label">Sistemas</p>
+            <p class="metric-value">10 Sistemas Core<br>em Evolução</p>
+          </div>
+          <div class="metric">
+            <p class="metric-label">Método</p>
+            <p class="metric-value">Investigar · Construir ·<br>Operar · Evoluir</p>
+          </div>
+          <div class="metric">
+            <p class="metric-label">Foco</p>
+            <p class="metric-value">Impacto, Segurança<br>e Soberania</p>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-  <section id="projetos">
-    <h2>Projetos & Propriedade Intelectual</h2>
-    <p class="section-subtitle">Tecnologias desenvolvidas, geridas e comercializadas pela TRIOTO. Toda a propriedade intelectual, desenvolvimento e operações são inteiramente nossos.</p>
+    <section class="section-shell ecosystem-section" id="sistemas">
+      <div class="section-bg" aria-hidden="true"></div>
+      <div class="section-container">
+        <h2 class="section-heading reveal" data-reveal>Ecossistema TRIOTO</h2>
+        <p class="section-subheading reveal" data-reveal>Sistemas integrados. Inteligência unificada. Impacto real.</p>
 
-    <div class="projects-grid">
+        <div class="ecosystem-map reveal" data-reveal>
+          <div class="hex-slot" data-slot="crm">
+            <div class="hex-tile" aria-label="CRMPLUS sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-crmplus-symbol.png" alt="CRMPLUS">
+              <p class="hex-title">CRMPLUS</p>
+              <p class="hex-subtitle">Plataforma CRM Avançada</p>
+              <span class="hex-chip">Em Breve</span>
+            </div>
+          </div>
 
-      <div class="project-card">
-        <img src="assets/logo-crmplus-official.png" alt="CRMPLUS" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>CRMPLUS</h3>
-        <div class="tagline">Plataforma CRM Avançada</div>
-        <p>Plataforma CRM avançada e modular para equipas comerciais, automação de processos, gestão de leads e operações com suporte de IA.</p>
-        <span class="badge badge-active">● Ativo</span>
-        <div class="card-footer">
-          <a href="https://crmplus.trioto.tech/" target="_blank" rel="noopener" class="card-link">Visitar Plataforma →</a>
-          <span class="ip-tag">PI TRIOTO</span>
+          <div class="hex-slot" data-slot="apok">
+            <a class="hex-tile is-link" href="https://www.apokaliptika.com/" target="_blank" rel="noopener">
+              <img class="hex-logo" src="assets/logos-official/logo-apok-symbol.png" alt="APOK">
+              <p class="hex-title">APOK</p>
+              <p class="hex-subtitle">Crisis &amp; Resilience OS</p>
+              <span class="hex-chip">Plataforma Ativa</span>
+            </a>
+          </div>
+
+          <div class="hex-slot" data-slot="hybrid">
+            <div class="hex-tile" aria-label="Hybrid Plant sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-hybridplant-symbol.png" alt="Hybrid Plant">
+              <p class="hex-title">Hybrid Plant</p>
+              <p class="hex-subtitle">Plataforma PRM</p>
+              <span class="hex-chip">Em Desenvolvimento</span>
+            </div>
+          </div>
+
+          <div class="hex-slot" data-slot="tria">
+            <div class="hex-tile" aria-label="TRIA sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-tria-symbol.png" alt="TRIA">
+              <p class="hex-title">TRIA</p>
+              <p class="hex-subtitle">Inteligência Artificial</p>
+              <span class="hex-chip">Em Desenvolvimento</span>
+            </div>
+          </div>
+
+          <div class="hex-slot" data-slot="triobid">
+            <div class="hex-tile" aria-label="TRIOBID.COM sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-triobid-symbol.png" alt="TRIOBID.COM">
+              <p class="hex-title">TRIOBID.COM</p>
+              <p class="hex-subtitle">Web Watcher by Measure</p>
+              <span class="hex-chip">Em Desenvolvimento</span>
+            </div>
+          </div>
+
+          <div class="hex-slot" data-slot="simfe">
+            <div class="hex-tile" aria-label="SIMFE sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-simfe-symbol.png" alt="SIMFE">
+              <p class="hex-title">SIMFE</p>
+              <p class="hex-subtitle">Autorização de Execução</p>
+              <span class="hex-chip">Beta Privado</span>
+            </div>
+          </div>
+
+          <div class="hex-slot" data-slot="homeflix">
+            <a class="hex-tile is-link" href="https://homeflix.im/" target="_blank" rel="noopener">
+              <img class="hex-logo" src="assets/logos-official/logo-homeflix-symbol.png" alt="homeflix.im">
+              <p class="hex-title">homeflix.im</p>
+              <p class="hex-subtitle">Copiloto Imobiliário</p>
+              <span class="hex-chip">Testado em Campo</span>
+            </a>
+          </div>
+
+          <div class="hex-slot" data-slot="gem">
+            <div class="hex-tile" aria-label="GEM sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-gem-symbol.png" alt="GEM">
+              <p class="hex-title">GEM</p>
+              <p class="hex-subtitle">Diamond Expert Assistant</p>
+              <span class="hex-chip">Em Desenvolvimento</span>
+            </div>
+          </div>
+
+          <div class="hex-slot" data-slot="triot">
+            <div class="hex-tile" aria-label="TR.IOT sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-triot-symbol.png" alt="TR.IOT">
+              <p class="hex-title">TR.IOT</p>
+              <p class="hex-subtitle">Plataforma Operacional IoT</p>
+              <span class="hex-chip">Arquitetura Interna</span>
+            </div>
+          </div>
+
+          <div class="hex-slot" data-slot="trigoritmo">
+            <div class="hex-tile" aria-label="TRIGORITMO sem link público ativo">
+              <img class="hex-logo" src="assets/logos-official/logo-trigoritmo-symbol.png" alt="TRIGORITMO">
+              <p class="hex-title">TRIGORITMO</p>
+              <p class="hex-subtitle">Arquitetura de Media Digital</p>
+              <span class="hex-chip">Em Desenvolvimento</span>
+            </div>
+          </div>
+
+          <div class="hex-slot" data-slot="trioto">
+            <a class="hex-tile center is-link" href="index-pt.html">
+              <img class="hex-logo" src="assets/logo-trioto-vertical-official-black.png" alt="TRIOTO">
+            </a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assets/logo-apok-official.png" alt="APOK" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>APOK</h3>
-        <div class="tagline">Sistema Operacional de Crise</div>
-        <p>Sistema de crise e resiliência para comando operacional, coordenação multi-entidade e resposta em tempo real em cenários críticos.</p>
-        <span class="badge badge-active">● Ativo · No Terreno</span>
-        <div class="card-footer">
-          <a href="https://www.apokaliptika.com/" target="_blank" rel="noopener" class="card-link">Visitar Plataforma →</a>
-          <span class="ip-tag">PI TRIOTO</span>
+    <section class="section-shell featured-section">
+      <div class="section-bg" aria-hidden="true"></div>
+      <div class="section-container">
+        <h2 class="section-heading reveal" data-reveal>Sistemas em Destaque</h2>
+        <p class="section-subheading reveal" data-reveal>As nossas tecnologias core a construir o futuro.</p>
+
+        <div class="featured-grid reveal" data-reveal>
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-crmplus-symbol.png" alt="CRMPLUS">
+              <h3 class="system-name">CRMPLUS</h3>
+            </header>
+            <p class="system-copy">Plataforma CRM modular avançada para equipas comerciais, automação de processos, gestão de pipeline e apoio por IA.</p>
+            <span class="status-chip active">Ativo</span>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-apok-symbol.png" alt="APOK">
+              <h3 class="system-name">APOK</h3>
+            </header>
+            <p class="system-copy">Plataforma de crise e resiliência para comando operacional, coordenação multi-entidade e resposta em tempo real.</p>
+            <span class="status-chip field-active">Ativo · Em campo</span>
+            <a class="system-link" href="https://www.apokaliptika.com/" target="_blank" rel="noopener">Visitar Plataforma</a>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-hybridplant-symbol.png" alt="Hybrid Plant">
+              <h3 class="system-name">Hybrid Plant</h3>
+            </header>
+            <p class="system-copy">Plataforma PRM para gestão de ativos híbridos, rastreabilidade e otimização contínua da evolução de cultivo.</p>
+            <span class="status-chip development">Em desenvolvimento</span>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-triobid-symbol.png" alt="TRIOBID.COM">
+              <h3 class="system-name">TRIOBID.COM</h3>
+            </header>
+            <p class="system-copy">Motor inteligente de monitorização e pesquisa para pessoas, tendências, oportunidades e filtragem automatizada.</p>
+            <span class="status-chip development">Em desenvolvimento</span>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-simfe-symbol.png" alt="SIMFE">
+              <h3 class="system-name">SIMFE</h3>
+            </header>
+            <p class="system-copy">Infraestrutura de cibersegurança e autorização de execução para proteção de ativos digitais e conformidade operacional.</p>
+            <span class="status-chip private-beta">Beta privado</span>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-tria-symbol.png" alt="TRIA">
+              <h3 class="system-name">TRIA</h3>
+            </header>
+            <p class="system-copy">Camada de IA para copilotos, automação cognitiva e apoio à decisão assistida em múltiplos produtos e fluxos.</p>
+            <span class="status-chip development">Em desenvolvimento</span>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-triot-symbol.png" alt="TR.IOT">
+              <h3 class="system-name">TR.IOT</h3>
+            </header>
+            <p class="system-copy">Arquitetura modular multi-tenant para operações reais seguras e escaláveis com sensores, válvulas e gateways.</p>
+            <span class="status-chip internal">Arquitetura interna</span>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-trigoritmo-symbol.png" alt="TRIGORITMO">
+              <h3 class="system-name">TRIGORITMO</h3>
+            </header>
+            <p class="system-copy">Arquitetura inteligente de media digital para orquestração, transporte e reconstrução de conteúdo à escala.</p>
+            <span class="status-chip development">Em desenvolvimento</span>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-homeflix-symbol.png" alt="homeflix.im">
+              <h3 class="system-name">homeflix.im</h3>
+            </header>
+            <p class="system-copy">Copiloto imobiliário para análise de imóveis, gestão de portefólio e inteligência para decisão de investimento.</p>
+            <span class="status-chip field-tested">Testado em campo</span>
+            <a class="system-link" href="https://homeflix.im/" target="_blank" rel="noopener">Visitar Plataforma</a>
+          </article>
+
+          <article class="system-card">
+            <header class="system-head">
+              <img class="system-logo" src="assets/logos-official/logo-gem-symbol.png" alt="GEM">
+              <h3 class="system-name">GEM</h3>
+            </header>
+            <p class="system-copy">Assistente especialista para avaliação e apoio à decisão no setor dos diamantes com consistência técnica.</p>
+            <span class="status-chip development">Em desenvolvimento</span>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assets/logo-hybridplant-official.png" alt="Hybrid Plant" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>Hybrid Plant</h3>
-        <div class="tagline">Plataforma PRM</div>
-        <p>Plataforma PRM para gestão de estirpes híbridas, rastreabilidade de cruzamentos, catalogação genética e otimização de programas de desenvolvimento vegetal.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
-        </div>
+    <section class="section-shell ip-section" id="sobre">
+      <span id="ip-patentes" class="section-anchor" aria-hidden="true"></span>
+      <div class="section-container ip-grid">
+        <article class="ip-lead reveal" data-reveal>
+          <h2>Tecnologia, IP e execução</h2>
+          <p>A TRIOTO constrói sistemas tecnológicos proprietários e detém a propriedade intelectual associada. Desenhamos para operação em contexto real com impacto mensurável.</p>
+        </article>
+        <article class="ip-item reveal" data-reveal>
+          <h3>Investigar &amp; Desenvolver</h3>
+          <p>Inovação orientada por I&amp;D com foco em desafios de elevado impacto e oportunidades emergentes.</p>
+        </article>
+        <article class="ip-item reveal" data-reveal>
+          <h3>Deter &amp; Proteger IP</h3>
+          <p>Todos os sistemas, modelos, dados e métodos são 100% detidos e protegidos pela TRIOTO.</p>
+        </article>
+        <article class="ip-item reveal" data-reveal>
+          <h3>Operar &amp; Controlar</h3>
+          <p>Operamos os sistemas em ambientes reais para garantir desempenho, resiliência e soberania operacional.</p>
+        </article>
+        <article class="ip-item reveal" data-reveal>
+          <h3>Evoluir &amp; Escalar</h3>
+          <p>Evolução contínua com base no feedback de campo, resultados mensuráveis e visão de longo prazo.</p>
+        </article>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assets/logo-searchflow-official.png" alt="SearchFlow" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>SearchFlow</h3>
-        <div class="tagline">Web Watcher By Measure</div>
-        <p>Motor inteligente de vigilância e pesquisa para concursos e oportunidades públicas, com filtragem automatizada e monitorização contínua.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
-        </div>
+    <section class="section-shell cta-section" id="desafio">
+      <div class="section-bg" aria-hidden="true"></div>
+      <div class="section-container challenge-grid">
+        <article class="protocol-card reveal" data-reveal>
+          <h3>Protocolo de Desafio</h3>
+          <ol class="protocol-list">
+            <li>Descreve o desafio com clareza.</li>
+            <li>Define o âmbito e o contexto.</li>
+            <li>Indica o impacto esperado.</li>
+            <li>Submete de forma segura para avaliação interna.</li>
+          </ol>
+        </article>
+
+        <article class="challenge-card reveal" data-reveal>
+          <h2>Submeter um desafio</h2>
+          <p>A próxima grande invenção pode começar com o teu desafio. Se estiver alinhado com a nossa missão e capacidades, poderemos construir uma solução proprietária contigo.</p>
+          <div class="challenge-actions">
+            <a class="btn btn-primary" href="desafio.html">Submeter um Desafio</a>
+            <a class="btn btn-secondary" href="desafio.html#challenge-protocol">Conhecer o processo</a>
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assets/logo-simfe-official.png" alt="SIMFE" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>SIMFE</h3>
-        <div class="tagline">Execution Authorization Infrastructure</div>
-        <p>Infraestrutura de cibersegurança e autorização de execução para proteção de ativos digitais, controlo de operações sensíveis e conformidade operacional.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
+    <footer class="section-shell site-footer">
+      <div class="section-container">
+        <div class="footer-grid">
+          <article class="footer-card">
+            <div class="footer-brand-row">
+              <img class="footer-logo" src="assets/logo-trioto-horizontal-official-black.png" alt="TRIOTO">
+            </div>
+            <p>Construímos sistemas tecnológicos proprietários para desbloquear o impossível.</p>
+            <div class="social-list">
+              <span class="social-icon" aria-hidden="true">in</span>
+              <span class="social-icon" aria-hidden="true">ig</span>
+              <span class="social-icon" aria-hidden="true">x</span>
+              <span class="social-icon" aria-hidden="true">yt</span>
+            </div>
+          </article>
+
+          <section class="footer-column" id="noticias">
+            <h3>Empresa</h3>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="#sobre">Sobre</a></li>
+              <li><a class="footer-link" href="#ip-patentes">IP &amp; Patentes</a></li>
+              <li><a class="footer-link" href="#noticias">Notícias</a></li>
+              <li><a class="footer-link" href="#noticias">Carreiras</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Sistemas</h3>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="#sistemas">Todos os Sistemas</a></li>
+              <li><a class="footer-link" href="#ip-patentes">Arquitetura</a></li>
+              <li><a class="footer-link" href="#ip-patentes">Segurança</a></li>
+              <li><a class="footer-link" href="#sistemas">Estado</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Recursos</h3>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="desafio.html">Desafio</a></li>
+              <li><a class="footer-link" href="#contacto">Contacto</a></li>
+              <li><a class="footer-link" href="#politica-privacidade">Política de Privacidade</a></li>
+              <li><a class="footer-link" href="#termos-uso">Termos de Uso</a></li>
+            </ul>
+            <p class="footer-meta" id="contacto">Email: admin@trioto.tech<br>Batalha, Leiria, Portugal</p>
+            <p class="footer-legal" id="politica-privacidade">Política de Privacidade: Recolhemos apenas os dados mínimos necessários para responder a contactos e avaliar submissões de desafios. Não vendemos dados pessoais.</p>
+            <p class="footer-legal" id="termos-uso">Termos de Uso: O conteúdo é disponibilizado para fins institucionais e informativos. Nomes de sistemas, modelos e métodos estão protegidos pela propriedade intelectual da TRIOTO.</p>
+          </section>
         </div>
+
+        <p class="footer-bottom">© <span class="js-year"></span> TRIOTO. Todos os direitos reservados.</p>
       </div>
+    </footer>
+  </main>
 
-      <div class="project-card">
-        <img src="assets/logo-tria-official.png" alt="TRIA" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>TRIA</h3>
-        <div class="tagline">Inteligência Artificial</div>
-        <p>Camada de inteligência artificial da TRIOTO para copilotos, automação cognitiva e tomada de decisão assistida em múltiplos produtos.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/logo-triot-official.png" alt="TR.IOT" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>TR.IOT</h3>
-        <div class="tagline">Plataforma modular multi-tenant, multi-ingestão e multi-transporte para operação real.</div>
-        <p>Plataforma operacional para monitorização e controlo de ativos no terreno, preparada para água, válvulas, sensores, gateways e integrações industriais.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/logo-trigoritmo-official.png" alt="TRIGORITMO" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>TRIGORITMO</h3>
-        <div class="tagline">Arquitetura Inteligente de Media Digital</div>
-        <p>Projeto focado em novas formas de estruturar, transportar e reconstruir media digital, com o objetivo de tornar sistemas audiovisuais mais inteligentes, eficientes e escaláveis.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/logo-homeflix-official.png" alt="homeflix.im" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>homeflix.im</h3>
-        <div class="tagline">Copiloto Imobiliário</div>
-        <p>Copiloto imobiliário para apoiar a compra de imóveis com análise assistida, organização de oportunidades e fluxo guiado até à decisão.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/logo-gem-official.png" alt="GEM" class="card-logo" width="6497" height="5827" loading="lazy" decoding="async">
-        <h3>GEM</h3>
-        <div class="tagline">Diamond Expert Assistant</div>
-        <p>Assistente especialista para avaliação e apoio à decisão no setor dos diamantes, com foco em precisão, critérios técnicos e suporte comercial.</p>
-        <span class="badge badge-dev">● Em Desenvolvimento</span>
-        <div class="card-footer">
-          <span class="card-link" style="opacity:.5">Em Breve</span>
-          <span class="ip-tag">PI TRIOTO</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contactos">
-    <h2>Contactos</h2>
-    <p>Email: <a href="mailto:admin@trioto.tech" style="color:var(--accent)">admin@trioto.tech</a></p>
-    <p style="color:var(--muted)">Batalha, Leiria · Portugal</p>
-  </section>
-
-  <section id="privacidade">
-    <h2>Política de Privacidade</h2>
-    <p style="color:var(--muted)">Recolhemos apenas o mínimo necessário para responder aos contactos. Não vendemos dados.</p>
-  </section>
-</main>
-
-<footer>© <span id="y"></span> TRIOTO · Tecnologia e Patentes</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script src="assets/js/trioto-site.js" defer></script>
 </body>
 </html>

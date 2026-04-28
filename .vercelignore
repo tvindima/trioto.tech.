@@ -1,0 +1,16 @@
+# Local/system artifacts
+.DS_Store
+**/.DS_Store
+
+# Backup and validation artifacts
+backups/
+review-shots/
+test-results/
+
+# Local reference/source assets not needed in public runtime
+assets/mockups/
+assets/source/
+assets/logos trioto e logos projects oficiais*
+
+# Non-web subproject not part of trioto.tech public site
+mobile_app/

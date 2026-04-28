@@ -3,101 +3,195 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Submit a Challenge to TRIOTO</title>
-  <meta name="description" content="Submit an idea or invention challenge to TRIOTO.">
-  <meta name="theme-color" content="#0c0c0f">
-  <meta name="color-scheme" content="dark">
+  <title>Submit a Challenge — TRIOTO</title>
+  <meta name="description" content="Submit an invention challenge to TRIOTO. We evaluate high-impact ideas under confidentiality principles.">
+  <meta name="keywords" content="TRIOTO challenge, invention challenge, proprietary technology, intellectual property, deep tech, AI, cybersecurity">
+  <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://trioto.tech/challenge.html">
   <link rel="alternate" hreflang="en" href="https://trioto.tech/challenge.html">
   <link rel="alternate" hreflang="pt" href="https://trioto.tech/desafio.html">
   <link rel="alternate" hreflang="x-default" href="https://trioto.tech/challenge.html">
+
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/favicon-16.png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta property="og:title" content="Submit a Challenge to TRIOTO">
-  <meta property="og:description" content="Submit an idea or invention challenge to TRIOTO.">
+
+  <meta property="og:title" content="Submit a Challenge — TRIOTO">
+  <meta property="og:description" content="Share your challenge. TRIOTO evaluates submissions for real-world impact and operational viability.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trioto.tech/challenge.html">
-  <meta property="og:image" content="https://trioto.tech/assets/og.png">
+  <meta property="og:image" content="https://trioto.tech/assets/backgrounds/04_challenge_footer_bg.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Submit a Challenge to TRIOTO">
-  <meta name="twitter:description" content="Submit an idea or invention challenge to TRIOTO.">
-  <meta name="twitter:image" content="https://trioto.tech/assets/og.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#0c0c0f;--card:#111318;--text:#e8e9ee;--muted:#a7a9b3;--accent:#00d3a7;--stroke:#232632}
-    *{box-sizing:border-box}
-    html,body{
-      margin:0;
-      color:var(--text);
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background-color:var(--bg);
-      background-image:url('assets/bg.png');
-      background-image:image-set(
-        url('assets/bg.webp') type('image/webp') 1x,
-        url('assets/bg.png') type('image/png') 1x
-      );
-      background-position:center;
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
-    }
-    .skip{position:absolute;left:-999px;top:10px;z-index:999;background:#fff;color:#000;padding:10px 12px;border-radius:10px;font-weight:700}
-    .skip:focus{left:10px}
-    .wrap{max-width:800px;margin:0 auto;padding:18px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--stroke)}
-    .brand{display:flex;align-items:center;gap:12px}.brand img{height:56px;width:auto}
-    h1{text-align:center;font-size:28px;margin-top:20px}
-    .intro{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:22px;margin:30px 0;font-size:16px;color:var(--muted)}
-    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:22px;margin-top:20px}
-    form{display:flex;flex-direction:column;gap:14px;margin-top:18px}
-    input,textarea{padding:10px 12px;border-radius:8px;border:1px solid var(--stroke);background:rgba(0,0,0,.65);color:var(--text)}
-    button{padding:12px 16px;border:none;border-radius:10px;background:var(--accent);color:#021711;font-weight:700;font-size:16px;cursor:pointer}
-    button:hover{opacity:.9}
-    footer{text-align:center;padding:20px 0;color:var(--muted);font-size:13px;margin-top:40px;border-top:1px solid var(--stroke)}
-    a.back{color:var(--accent);text-decoration:none;font-weight:600}
-    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-    @media (max-width:768px){html,body{background-attachment:scroll}}
-  </style>
+  <meta name="twitter:title" content="Submit a Challenge — TRIOTO">
+  <meta name="twitter:description" content="The next great invention could start with your challenge.">
+  <meta name="twitter:image" content="https://trioto.tech/assets/backgrounds/04_challenge_footer_bg.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/trioto-site.css">
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <main id="main" class="wrap">
-    <header>
-      <div class="brand">
-        <img src="assets/logo-trioto-official-white.png" alt="TRIOTO" width="4439" height="5057">
+<body class="challenge-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-link" href="index.html" aria-label="TRIOTO home">
+        <img class="brand-logo" src="assets/logo-trioto-horizontal-official-black.png" alt="TRIOTO">
+        <span class="brand-text">
+          <span class="brand-name">Technology & Intent</span>
+          <span class="brand-tagline">Proprietary Systems</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html#about">About</a>
+        <a class="nav-link" href="index.html#systems">Systems</a>
+        <a class="nav-link" href="index.html#ip-patents">IP &amp; Patents</a>
+        <a class="nav-link" href="challenge.html" aria-current="page">Challenge</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+        <a class="nav-link" href="index.html#news">News</a>
+
+        <details class="lang-switch">
+          <summary>EN ▾</summary>
+          <div class="lang-menu">
+            <a href="challenge.html" aria-current="page">English</a>
+            <a href="desafio.html" lang="pt">Português</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section-shell page-hero">
+      <div class="section-bg" aria-hidden="true"></div>
+      <div class="page-hero-grid">
+        <div class="reveal" data-reveal>
+          <p class="eyebrow">Challenge Program</p>
+          <h1 class="page-title">Submit a challenge</h1>
+          <p class="page-lead">Do you believe something should already exist, but still does not? Share your challenge with TRIOTO. We evaluate high-impact opportunities under confidentiality principles.</p>
+        </div>
+        <aside class="page-badge reveal" data-reveal>
+          <h2>Response Window</h2>
+          <p>Every submission is screened internally and routed according to originality, feasibility and potential impact.</p>
+        </aside>
       </div>
-      <a href="index.html" class="back">Back</a>
-    </header>
+    </section>
 
-    <h1>Submit a Challenge to TRIOTO</h1>
+    <section class="section-shell challenge-content" id="challenge-protocol">
+      <div class="section-container challenge-columns">
+        <article class="challenge-panel reveal" data-reveal>
+          <h2>Challenge Protocol</h2>
+          <p>Submissions should be clear, concise and tied to a real problem worth solving.</p>
+          <ol class="protocol-list">
+            <li>Define the challenge and why it matters.</li>
+            <li>Describe the context and constraints.</li>
+            <li>Explain expected operational impact.</li>
+            <li>Submit your challenge securely.</li>
+          </ol>
 
-    <div class="intro">
-      <p>Do you believe there’s something that should have been invented — but hasn’t yet?</p>
-      <p>TRIOTO is looking for ideas with real impact. If your suggestion results in a viable project, you will be associated with the patent and may benefit financially from the rights.</p>
-      <p>Each proposal is evaluated internally, under confidentiality, based on originality and applicability.</p>
-      <p>The process is free and transparent.</p>
-      <p><b>Submit your challenge.</b> The next great invention could start with you.</p>
-    </div>
+          <div class="challenge-notes">
+            <article class="note-card">
+              <h3>Confidential Internal Review</h3>
+              <p>Submissions are reviewed internally by TRIOTO teams according to confidentiality principles.</p>
+            </article>
+            <article class="note-card">
+              <h3>Evaluation Focus</h3>
+              <p>Originality, real-world applicability, technical viability and strategic relevance.</p>
+            </article>
+          </div>
+        </article>
 
-    <div class="card">
-      <form action="https://formspree.io/f/mqayozoa" method="POST">
-        <label for="name">Name*</label>
-        <input id="name" type="text" name="Name" autocomplete="name" required>
-        <label for="email">Email*</label>
-        <input id="email" type="email" name="Email" autocomplete="email" required>
-        <label for="idea">Describe your idea*</label>
-        <textarea id="idea" name="Idea" rows="6" required></textarea>
-        <label><input type="checkbox" name="Consent" required> I confirm that this idea is mine and I agree to have it evaluated by TRIOTO.</label>
-        <button type="submit">Submit Idea</button>
-      </form>
-    </div>
+        <article class="form-panel reveal" data-reveal id="challenge-form">
+          <h2>Submission Form</h2>
+          <p>The process is free and transparent. Required fields are marked with *.</p>
 
-    <footer>© <span id="y"></span> TRIOTO · Technology & Patents</footer>
+          <form class="challenge-form" action="https://formspree.io/f/mqayozoa" method="POST" data-form-lang="en">
+            <label for="name">Name*</label>
+            <input id="name" name="Name" type="text" autocomplete="name" required>
+
+            <label for="email">Email*</label>
+            <input id="email" name="Email" type="email" autocomplete="email" required>
+
+            <label for="idea">Describe your idea/challenge*</label>
+            <textarea id="idea" name="Idea" required></textarea>
+
+            <label class="checkbox-line" for="consent">
+              <input id="consent" type="checkbox" name="Consent" required>
+              <span>I confirm that this submission is mine, that I have the right to share it, and I agree that TRIOTO may evaluate it internally under confidentiality principles. This submission does not create an automatic commercial, employment, partnership or IP transfer agreement.</span>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Submit Challenge</button>
+            <a class="btn btn-secondary" href="index.html#challenge">Back to overview</a>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell contact-section" id="contact">
+      <div class="section-container">
+        <article class="contact-card reveal" data-reveal>
+          <h2>Contact</h2>
+          <p class="contact-item">Email: <a href="mailto:admin@trioto.tech">admin@trioto.tech</a></p>
+          <p class="contact-item">Location: Batalha, Leiria, Portugal</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="section-shell site-footer">
+      <div class="section-container">
+        <div class="footer-grid">
+          <article class="footer-card">
+            <div class="footer-brand-row">
+              <img class="footer-logo" src="assets/logo-trioto-horizontal-official-black.png" alt="TRIOTO">
+            </div>
+            <p>Building proprietary technology systems that unlock the impossible.</p>
+          </article>
+
+          <section class="footer-column">
+            <h3>Company</h3>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="index.html#about">About</a></li>
+              <li><a class="footer-link" href="index.html#ip-patents">IP &amp; Patents</a></li>
+              <li><a class="footer-link" href="index.html#news">News</a></li>
+              <li><a class="footer-link" href="index.html#news">Careers</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Systems</h3>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="index.html#systems">All Systems</a></li>
+              <li><a class="footer-link" href="index.html#ip-patents">Architecture</a></li>
+              <li><a class="footer-link" href="index.html#ip-patents">Security</a></li>
+              <li><a class="footer-link" href="index.html#systems">Status</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Resources</h3>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="challenge.html">Challenge</a></li>
+              <li><a class="footer-link" href="index.html#contact">Contact</a></li>
+              <li><a class="footer-link" href="index.html#privacy-policy">Privacy Policy</a></li>
+              <li><a class="footer-link" href="index.html#terms-of-use">Terms of Use</a></li>
+            </ul>
+            <p class="footer-meta">Email: admin@trioto.tech<br>Batalha, Leiria, Portugal</p>
+          </section>
+        </div>
+
+        <p class="footer-bottom">© <span class="js-year"></span> TRIOTO. All rights reserved.</p>
+      </div>
+    </footer>
   </main>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+  <script src="assets/js/trioto-site.js" defer></script>
 </body>
 </html>
