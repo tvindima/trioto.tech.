@@ -792,6 +792,94 @@ footer[id] {
   transform: translateY(108px);
 }
 
+.ecosystem-teaser {
+  padding: 38px 0 42px;
+}
+
+.ecosystem-teaser::after {
+  display: none;
+}
+
+.ecosystem-teaser .section-bg {
+  background-image: image-set(
+    url("../backgrounds/02_ecosystem_network_bg.webp") type("image/webp"),
+    url("../backgrounds/02_ecosystem_network_bg.png") type("image/png")
+  );
+  background-size: cover;
+  background-position: center;
+  opacity: 0.38;
+}
+
+.ecosystem-teaser .section-heading {
+  font-size: clamp(1.65rem, 3.2vw, 2.45rem);
+  letter-spacing: 0.06em;
+}
+
+.ecosystem-teaser .section-subheading {
+  font-size: 0.94rem;
+  margin-top: 6px;
+}
+
+.ecosystem-teaser .ecosystem-map {
+  margin-top: 16px;
+  width: min(1220px, 100%);
+  min-height: 610px;
+}
+
+.ecosystem-teaser .ecosystem-map::before {
+  opacity: 0.92;
+}
+
+.ecosystem-teaser .hex-tile::before,
+.ecosystem-teaser .hex-tile.center::before {
+  content: none;
+}
+
+.ecosystem-teaser .hex-slot {
+  width: clamp(170px, 12.6vw, 206px);
+}
+
+.ecosystem-teaser .hex-slot[data-slot="trioto"] {
+  width: clamp(292px, 25vw, 374px);
+}
+
+.ecosystem-teaser .hex-tile {
+  min-height: clamp(188px, 14vw, 222px);
+  grid-template-rows: 74px auto auto auto;
+  gap: 5px;
+}
+
+.ecosystem-teaser .hex-logo {
+  width: clamp(40px, 3vw, 48px);
+  height: clamp(40px, 3vw, 48px);
+  margin-top: 18px;
+}
+
+.ecosystem-teaser .hex-title {
+  font-size: clamp(0.9rem, 0.9vw, 1.02rem);
+}
+
+.ecosystem-teaser .hex-subtitle {
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+}
+
+.ecosystem-teaser .hex-chip {
+  min-height: 22px;
+  padding: 2px 10px;
+  font-size: 0.58rem;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.ecosystem-teaser .hex-tile.center {
+  min-height: clamp(306px, 23vw, 360px);
+}
+
+.ecosystem-teaser .hex-tile.center .hex-logo {
+  width: clamp(148px, 12vw, 194px);
+  transform: translateY(76px);
+}
+
 
 .featured-section {
   padding: 62px 0 58px;
@@ -1832,6 +1920,12 @@ footer[id] {
 
   .news-page .news-secondary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ecosystem-teaser .ecosystem-map {
+    min-height: 0;
+    width: 100%;
+    margin-top: 14px;
   }
 }
 
