@@ -1569,6 +1569,15 @@ footer[id] {
   background-position: center;
 }
 
+.challenge-hero .section-bg {
+  background-image: image-set(
+    url("../backgrounds/08_challenge_hero_bg_v2.webp") type("image/webp"),
+    url("../backgrounds/08_challenge_hero_bg_v2.png") type("image/png")
+  );
+  background-size: cover;
+  background-position: center;
+}
+
 .page-hero::before {
   content: "";
   position: absolute;
