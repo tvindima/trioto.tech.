@@ -1548,12 +1548,22 @@ footer[id] {
   );
   background-size: cover;
   background-position: center;
+  filter: none;
+}
+
+.about-hero .section-bg {
+  background-image: image-set(
+    url("../backgrounds/07_about_hero_bg_v2.webp") type("image/webp"),
+    url("../backgrounds/07_about_hero_bg_v2.png") type("image/png")
+  );
+  background-size: cover;
+  background-position: center;
 }
 
 .ip-hero .section-bg {
   background-image: image-set(
-    url("../backgrounds/06_ip_patents_hero_bg_v2.webp") type("image/webp"),
-    url("../backgrounds/06_ip_patents_hero_bg_v2.png") type("image/png")
+    url("../backgrounds/06_ip_patents_hero_bg_v3.webp") type("image/webp"),
+    url("../backgrounds/06_ip_patents_hero_bg_v3.png") type("image/png")
   );
   background-size: cover;
   background-position: center;
@@ -1564,7 +1574,7 @@ footer[id] {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(95deg, rgba(245, 242, 236, 0.9) 0%, rgba(245, 242, 236, 0.62) 46%, rgba(245, 242, 236, 0.24) 100%);
+  background: linear-gradient(95deg, rgba(245, 242, 236, 0.56) 0%, rgba(245, 242, 236, 0.3) 48%, rgba(245, 242, 236, 0.08) 100%);
 }
 
 .page-hero-grid {
