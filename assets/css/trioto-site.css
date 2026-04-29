@@ -1550,6 +1550,15 @@ footer[id] {
   background-position: center;
 }
 
+.ip-hero .section-bg {
+  background-image: image-set(
+    url("../backgrounds/06_ip_patents_hero_bg_v2.webp") type("image/webp"),
+    url("../backgrounds/06_ip_patents_hero_bg_v2.png") type("image/png")
+  );
+  background-size: cover;
+  background-position: center;
+}
+
 .page-hero::before {
   content: "";
   position: absolute;
