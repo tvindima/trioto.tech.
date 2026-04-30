@@ -607,218 +607,203 @@ footer[id] {
 }
 
 .ecosystem-section .section-container {
-  padding-top: 8px;
+  width: min(1560px, calc(100% - 38px));
+  padding-top: 4px;
 }
 
-.ecosystem-section .section-heading {
-  font-size: clamp(1.95rem, 4vw, 2.7rem);
-  letter-spacing: 0.045em;
-}
-
-.ecosystem-section .section-subheading {
-  font-size: 1.02rem;
-  margin-top: 10px;
-}
-
-.ecosystem-static {
-  margin-top: 6px;
-  width: min(1420px, 100%);
-  margin-inline: auto;
-  border-radius: clamp(18px, 2.6vw, 30px);
+.ecosystem-panel {
+  position: relative;
+  width: min(1480px, 100%);
+  aspect-ratio: 3 / 1;
+  margin: 0 auto;
   overflow: hidden;
-  border: 1px solid rgba(216, 177, 106, 0.28);
-  box-shadow: 0 18px 44px rgba(30, 34, 42, 0.08);
+  border-radius: clamp(22px, 2.6vw, 32px);
+  border: 1px solid rgba(216, 177, 106, 0.26);
+  box-shadow: 0 20px 46px rgba(30, 34, 42, 0.08);
 }
 
-.ecosystem-static picture,
-.ecosystem-static img {
-  display: block;
+.ecosystem-bg,
+.ecosystem-overlay {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ecosystem-bg {
+  z-index: 0;
+}
+
+.ecosystem-overlay {
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.92;
 }
 
 .ecosystem-section .section-bg {
-  background-image: image-set(
-    url("../ecosystem/ecosystem-bg-base.webp") type("image/webp"),
-    url("../ecosystem/ecosystem-bg-base.png") type("image/png")
-  );
-  background-size: cover;
-  background-position: center;
-  filter: brightness(1.01) saturate(0.98);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.58) 0%, rgba(246, 243, 237, 0.48) 100%);
+}
+
+.ecosystem-header {
+  position: absolute;
+  top: 8.1%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  width: min(90%, 920px);
+}
+
+.ecosystem-header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.15vw, 3.12rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: 0.048em;
+  text-transform: uppercase;
+  color: #17191f;
+}
+
+.ecosystem-header p {
+  margin: 10px 0 0;
+  font-size: clamp(0.88rem, 1vw, 1.14rem);
+  line-height: 1.3;
+  color: #5d6675;
 }
 
 .ecosystem-map {
-  position: relative;
-  isolation: isolate;
-  margin-top: 26px;
-  margin-left: auto;
-  margin-right: auto;
-  width: min(1360px, 100%);
-  aspect-ratio: 1586 / 992;
-  min-height: 760px;
-}
-
-.ecosystem-map::before {
-  content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
-  background-image: image-set(
-    url("../ecosystem/ecosystem-layout-empty.webp") type("image/webp"),
-    url("../ecosystem/ecosystem-layout-empty.png") type("image/png")
-  );
-  background-size: cover;
-  background-position: center;
-  pointer-events: none;
+  z-index: 4;
 }
 
-.hex-slot {
+.ecosystem-node {
   position: absolute;
-  width: clamp(182px, 14vw, 222px);
-  transform: translate(-50%, 0);
-}
-
-.hex-slot[data-slot="crm"] { left: 17.7%; top: 15.6%; }
-.hex-slot[data-slot="apok"] { left: 33.3%; top: 15.6%; }
-.hex-slot[data-slot="hybrid"] { left: 66.7%; top: 15.6%; }
-.hex-slot[data-slot="tria"] { left: 82.3%; top: 15.6%; }
-.hex-slot[data-slot="triobid"] { left: 17.7%; top: 42.6%; }
-.hex-slot[data-slot="simfe"] { left: 33.3%; top: 42.6%; }
-.hex-slot[data-slot="homeflix"] { left: 66.7%; top: 42.6%; }
-.hex-slot[data-slot="gem"] { left: 82.3%; top: 42.6%; }
-.hex-slot[data-slot="triot"] { left: 39%; top: 70.2%; }
-.hex-slot[data-slot="trigoritmo"] { left: 61%; top: 70.2%; }
-.hex-slot[data-slot="trioto"] {
-  left: 50%;
-  top: 28.8%;
-  width: clamp(364px, 30vw, 456px);
-}
-
-.hex-tile {
-  border: 0;
-  background: transparent;
-  width: 100%;
-  min-height: clamp(222px, 17vw, 254px);
-  padding: 0 8px;
-  position: relative;
-  display: grid;
-  grid-template-rows: 104px auto auto auto;
-  align-content: start;
-  justify-items: center;
+  transform: translate(-50%, -50%);
   text-align: center;
-  gap: 7px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 180ms ease, filter 180ms ease;
+  width: clamp(92px, 7.4vw, 132px);
+  z-index: 4;
 }
 
-.hex-tile::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: clamp(138px, 10.8vw, 172px);
-  aspect-ratio: 1 / 1;
-  background-image: image-set(
-    url("../ecosystem/ecosystem-hex-peripheral.webp") type("image/webp"),
-    url("../ecosystem/ecosystem-hex-peripheral.png") type("image/png")
-  );
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
-
-.hex-tile.is-link:hover,
-.hex-tile.is-link:focus-visible {
-  transform: translateY(-2px);
-  filter: brightness(0.99);
-}
-
-.hex-logo {
-  width: clamp(48px, 3.8vw, 60px);
-  height: clamp(48px, 3.8vw, 60px);
+.ecosystem-node img {
+  display: block;
+  width: 54%;
+  max-width: 72px;
+  height: auto;
+  margin: 0 auto 7px;
   object-fit: contain;
-  object-position: center;
-  margin-top: 28px;
-  z-index: 2;
 }
 
-.hex-title {
+.ecosystem-node h3 {
   margin: 0;
+  font-size: clamp(0.8rem, 0.78vw, 0.96rem);
+  line-height: 1.08;
   font-weight: 800;
-  font-size: clamp(1rem, 1vw, 1.15rem);
   letter-spacing: 0.03em;
-  line-height: 1.14;
-  text-wrap: balance;
+  color: #17191f;
 }
 
-.hex-subtitle {
-  margin: 0;
-  color: #3f4858;
-  font-size: 0.72rem;
-  line-height: 1.3;
+.ecosystem-node p {
+  margin: 5px 0 0;
+  font-size: clamp(0.54rem, 0.52vw, 0.68rem);
+  line-height: 1.16;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  max-width: 168px;
+  letter-spacing: 0.045em;
+  color: #5d6675;
+  max-width: 132px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.hex-chip {
-  margin-top: 5px;
-  border-radius: 999px;
-  border: 1px solid rgba(30, 34, 42, 0.2);
-  padding: 4px 12px;
-  min-height: 26px;
-  font-size: 0.68rem;
+.ecosystem-node .status-chip {
+  margin-top: 7px;
+  min-height: 22px;
+  padding: 0 9px;
+  font-size: clamp(0.42rem, 0.46vw, 0.58rem);
   letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.ecosystem-node--center {
+  left: 50%;
+  top: 50%;
+  width: clamp(120px, 9.4vw, 168px);
+}
+
+.ecosystem-node--center img {
+  width: 88%;
+  max-width: 152px;
+  margin: 0 auto;
+}
+
+.node-crmplus { left: 14.96%; top: 32.04%; }
+.node-apok { left: 30.43%; top: 32.04%; }
+.node-hybrid { left: 67.72%; top: 32.04%; }
+.node-tria { left: 83.20%; top: 32.04%; }
+
+.node-triobid { left: 12.94%; top: 58.01%; }
+.node-simfe { left: 31.44%; top: 58.01%; }
+.node-homeflix { left: 66.71%; top: 58.01%; }
+.node-gem { left: 85.23%; top: 58.01%; }
+
+.node-triot { left: 37.98%; top: 77.90%; }
+.node-trigoritmo { left: 60.08%; top: 77.90%; }
+
+.node-crmplus img { width: 52%; }
+.node-apok img { width: 54%; }
+.node-hybrid img { width: 54%; }
+.node-tria img { width: 52%; }
+.node-triobid img { width: 56%; }
+.node-simfe img { width: 56%; }
+.node-homeflix img { width: 50%; }
+.node-gem img { width: 54%; }
+.node-triot img { width: 54%; }
+.node-trigoritmo img { width: 54%; }
+
+.ecosystem-mobile-grid {
+  display: none;
+  position: relative;
+  z-index: 4;
+}
+
+.ecosystem-mobile-card {
+  border: 1px solid rgba(30, 34, 42, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 20px rgba(30, 34, 42, 0.06);
+  padding: 12px 10px;
+}
+
+.ecosystem-mobile-card img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+.ecosystem-mobile-card h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+.ecosystem-mobile-card p {
+  margin: 5px 0 0;
+  text-align: center;
+  font-size: 0.64rem;
+  line-height: 1.25;
   text-transform: uppercase;
   color: var(--color-text-muted);
-  background: rgba(255, 255, 255, 0.6);
 }
 
-.hex-tile.center {
-  width: 100%;
-  min-height: clamp(412px, 32vw, 478px);
-  padding: 0;
-  background: transparent;
-  border: 0;
-  display: grid;
-  grid-template-rows: 1fr;
-  gap: 0;
-  place-items: start center;
-  justify-items: center;
-  align-items: start;
-  isolation: isolate;
-}
-
-.hex-tile.center::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: clamp(320px, 26vw, 408px);
-  aspect-ratio: 1 / 1;
-  background-image: image-set(
-    url("../ecosystem/ecosystem-hex-core.webp") type("image/webp"),
-    url("../ecosystem/ecosystem-hex-core.png") type("image/png")
-  );
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
-
-.hex-tile.center .hex-logo {
-  width: clamp(226px, 18.6vw, 312px);
-  height: auto;
-  max-width: 95%;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  z-index: 2;
-  transform: translateY(108px);
+.ecosystem-mobile-card .status-chip {
+  margin: 8px auto 0;
+  display: inline-flex;
 }
 
 .ecosystem-teaser {
@@ -848,67 +833,6 @@ footer[id] {
   font-size: 0.94rem;
   margin-top: 6px;
 }
-
-.ecosystem-teaser .ecosystem-map {
-  margin-top: 16px;
-  width: min(1220px, 100%);
-  min-height: 610px;
-}
-
-.ecosystem-teaser .ecosystem-map::before {
-  opacity: 0.92;
-}
-
-.ecosystem-teaser .hex-tile::before,
-.ecosystem-teaser .hex-tile.center::before {
-  content: none;
-}
-
-.ecosystem-teaser .hex-slot {
-  width: clamp(170px, 12.6vw, 206px);
-}
-
-.ecosystem-teaser .hex-slot[data-slot="trioto"] {
-  width: clamp(292px, 25vw, 374px);
-}
-
-.ecosystem-teaser .hex-tile {
-  min-height: clamp(188px, 14vw, 222px);
-  grid-template-rows: 74px auto auto auto;
-  gap: 5px;
-}
-
-.ecosystem-teaser .hex-logo {
-  width: clamp(40px, 3vw, 48px);
-  height: clamp(40px, 3vw, 48px);
-  margin-top: 18px;
-}
-
-.ecosystem-teaser .hex-title {
-  font-size: clamp(0.9rem, 0.9vw, 1.02rem);
-}
-
-.ecosystem-teaser .hex-subtitle {
-  font-size: 0.64rem;
-  letter-spacing: 0.04em;
-}
-
-.ecosystem-teaser .hex-chip {
-  min-height: 22px;
-  padding: 2px 10px;
-  font-size: 0.58rem;
-  background: rgba(255, 255, 255, 0.84);
-}
-
-.ecosystem-teaser .hex-tile.center {
-  min-height: clamp(306px, 23vw, 360px);
-}
-
-.ecosystem-teaser .hex-tile.center .hex-logo {
-  width: clamp(148px, 12vw, 194px);
-  transform: translateY(76px);
-}
-
 
 .featured-section {
   padding: 62px 0 58px;
@@ -1870,73 +1794,36 @@ footer[id] {
     max-width: 720px;
   }
 
-  .ecosystem-map {
-    display: grid;
-    aspect-ratio: auto;
-    min-height: 0;
-    width: 100%;
-    padding: 14px 8px 8px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: none;
-    grid-template-areas:
-      "trioto trioto trioto trioto"
-      "crm apok hybrid tria"
-      "triobid simfe homeflix gem"
-      "triot triot trigoritmo trigoritmo";
-    gap: 14px;
+  .ecosystem-section .section-container {
+    width: calc(100% - 34px);
   }
 
-  .ecosystem-map::before {
-    opacity: 0.54;
-    border-radius: 18px;
+  .ecosystem-panel {
+    aspect-ratio: 3.2 / 1.35;
   }
 
-  .hex-slot {
-    position: static;
-    transform: none;
-    width: min(214px, 100%);
-    min-height: 0;
-    margin: 0 auto;
+  .ecosystem-header {
+    top: 7.3%;
   }
 
-  .hex-slot[data-slot="trioto"] {
-    width: min(460px, 100%);
+  .ecosystem-header h2 {
+    font-size: clamp(1.72rem, 3.1vw, 2.45rem);
   }
 
-  .hex-tile {
-    min-height: 214px;
-    grid-template-rows: 96px auto auto auto;
+  .ecosystem-header p {
+    font-size: clamp(0.8rem, 0.95vw, 1rem);
   }
 
-  .hex-tile::before {
-    width: 152px;
+  .ecosystem-node {
+    width: clamp(80px, 7.5vw, 108px);
   }
 
-  .hex-logo {
-    margin-top: 24px;
-    width: 54px;
-    height: 54px;
+  .ecosystem-node h3 {
+    font-size: clamp(0.82rem, 0.86vw, 0.95rem);
   }
 
-  .hex-tile.center {
-    min-height: 312px;
-  }
-
-  .hex-tile.center::before {
-    width: 250px;
-  }
-
-  .hex-tile.center .hex-logo {
-    width: 190px;
-    transform: translateY(74px);
-  }
-
-  .ecosystem-section .section-container::before {
-    display: none;
-  }
-
-  .hex-slot::after {
-    transform: none;
+  .ecosystem-node p {
+    font-size: clamp(0.52rem, 0.56vw, 0.66rem);
   }
 
   .featured-grid {
@@ -1979,11 +1866,6 @@ footer[id] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .ecosystem-teaser .ecosystem-map {
-    min-height: 0;
-    width: 100%;
-    margin-top: 14px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -2010,6 +1892,32 @@ footer[id] {
 
   .ip-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ecosystem-panel {
+    aspect-ratio: 3.2 / 1.6;
+  }
+
+  .ecosystem-header {
+    top: 6.9%;
+  }
+
+  .ecosystem-node {
+    width: clamp(72px, 8vw, 96px);
+  }
+
+  .ecosystem-node h3 {
+    font-size: 0.82rem;
+  }
+
+  .ecosystem-node p {
+    font-size: 0.52rem;
+  }
+
+  .ecosystem-node .status-chip {
+    min-height: 20px;
+    padding: 0 8px;
+    font-size: 0.45rem;
   }
 }
 
@@ -2137,61 +2045,42 @@ footer[id] {
     margin-top: 8px;
   }
 
-  .ecosystem-map {
-    display: grid;
+  .ecosystem-panel {
     aspect-ratio: auto;
-    min-height: 0;
-    padding: 8px 0 4px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas:
-      "trioto trioto"
-      "crm apok"
-      "hybrid tria"
-      "triobid simfe"
-      "homeflix gem"
-      "triot trigoritmo";
-    gap: 10px;
+    min-height: 760px;
+    border-radius: 24px;
   }
 
-  .ecosystem-map::before {
-    opacity: 0.38;
+  .ecosystem-overlay,
+  .ecosystem-map {
+    display: none;
   }
 
-  .hex-slot {
-    position: static;
+  .ecosystem-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     width: 100%;
+    padding: 32px 20px 16px;
+    text-align: center;
   }
 
-  .hex-tile {
-    min-height: 176px;
-    grid-template-rows: 84px auto auto auto;
-    padding: 12px 10px;
+  .ecosystem-header h2 {
+    font-size: clamp(1.58rem, 8vw, 2.18rem);
+    letter-spacing: 0.04em;
   }
 
-  .hex-tile::before {
-    width: 132px;
+  .ecosystem-header p {
+    font-size: 0.9rem;
+    margin-top: 8px;
   }
 
-  .hex-tile.center {
-    min-height: 254px;
-    width: min(320px, 100%);
-    margin: 0 auto;
-  }
-
-  .hex-tile.center::before {
-    width: 204px;
-  }
-
-  .hex-tile.center .hex-logo {
-    width: 154px;
-    height: auto;
-    transform: translateY(58px);
-  }
-
-  .hex-logo {
-    margin-top: 20px;
-    width: 48px;
-    height: 48px;
+  .ecosystem-mobile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 16px 26px;
   }
 
   .featured-grid {
@@ -2324,6 +2213,24 @@ footer[id] {
   .brand-logo {
     height: 33px;
     max-width: 138px;
+  }
+
+  .ecosystem-panel {
+    min-height: 920px;
+  }
+
+  .ecosystem-mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 12px 22px;
+  }
+
+  .ecosystem-mobile-card {
+    padding: 12px 11px;
+  }
+
+  .ecosystem-mobile-card p {
+    font-size: 0.62rem;
   }
 
   .challenge-content {
